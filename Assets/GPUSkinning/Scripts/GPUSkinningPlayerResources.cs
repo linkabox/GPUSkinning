@@ -19,7 +19,7 @@ public class GPUSkinningPlayerResources
 
     public Mesh mesh = null;
 
-    public Texture2D texture = null;
+    public Texture2D boneTexture = null;
 
     public List<GPUSkinningPlayerMono> players = new List<GPUSkinningPlayerMono>();
 
@@ -101,11 +101,12 @@ public class GPUSkinningPlayerResources
             mtrls = null;
         }
 
-        if (texture != null)
-        {
-            Object.DestroyImmediate(texture);
-            texture = null;
-        }
+        //if (boneTexture != null)
+        //{
+        //    Object.DestroyImmediate(boneTexture);
+        //    boneTexture = null;
+        //}
+	    boneTexture = null;
 
         if (players != null)
         {
@@ -222,7 +223,7 @@ public class GPUSkinningPlayerResources
         if (mtrl.executeOncePerFrame.CanBeExecute())
         {
             mtrl.executeOncePerFrame.MarkAsExecuted();
-            mtrl.material.SetTexture(shaderPropID_GPUSkinning_TextureMatrix, texture);
+            mtrl.material.SetTexture(shaderPropID_GPUSkinning_TextureMatrix, boneTexture);
             mtrl.material.SetVector(shaderPropID_GPUSkinning_TextureSize_NumPixelsPerFrame, 
                 new Vector4(anim.textureWidth, anim.textureHeight, anim.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
         }

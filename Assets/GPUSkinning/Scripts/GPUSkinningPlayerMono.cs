@@ -19,7 +19,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 
     [HideInInspector]
     [SerializeField]
-    private TextAsset textureRawData = null;
+    private Texture2D boneTexture = null;
 
     [HideInInspector]
     [SerializeField]
@@ -48,7 +48,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
         }
     }
 
-    public void Init(GPUSkinningAnimation anim, Mesh mesh, Material mtrl, TextAsset textureRawData)
+    public void Init(GPUSkinningAnimation anim, Mesh mesh, Material mtrl, Texture2D boneTexture)
     {
         if(player != null)
         {
@@ -58,7 +58,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
         this.anim = anim;
         this.mesh = mesh;
         this.mtrl = mtrl;
-        this.textureRawData = textureRawData;
+        this.boneTexture = boneTexture;
         Init();
     }
 
@@ -69,13 +69,13 @@ public class GPUSkinningPlayerMono : MonoBehaviour
             return;
         }
 
-        if (anim != null && mesh != null && mtrl != null && textureRawData != null)
+        if (anim != null && mesh != null && mtrl != null && boneTexture != null)
         {
             GPUSkinningPlayerResources res = null;
 
             if (Application.isPlaying)
             {
-                playerManager.Register(anim, mesh, mtrl, textureRawData, this, out res);
+                playerManager.Register(anim, mesh, mtrl, boneTexture, this, out res);
             }
             else
             {
@@ -83,8 +83,8 @@ public class GPUSkinningPlayerMono : MonoBehaviour
                 res.anim = anim;
                 res.mesh = mesh;
                 res.InitMaterial(mtrl, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
-                res.texture = GPUSkinningUtil.CreateTexture2D(textureRawData, anim);
-                res.texture.hideFlags = HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor;
+	            res.boneTexture = boneTexture;//GPUSkinningUtil.CreateTexture2D(boneTexture, anim);
+                res.boneTexture.hideFlags = HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor;
             }
 
             player = new GPUSkinningPlayer(gameObject, res);
@@ -156,7 +156,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
         anim = null;
         mesh = null;
         mtrl = null;
-        textureRawData = null;
+        boneTexture = null;
 
         if (Application.isPlaying)
         {

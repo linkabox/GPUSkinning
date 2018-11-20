@@ -14,7 +14,7 @@ public class GPUSkinningSamplerEditor : Editor
 
 	private Material mtrl = null;
 
-    private TextAsset texture = null;
+    private Texture2D boneTexture = null;
 
 	private RenderTexture rt = null;
 
@@ -127,7 +127,7 @@ public class GPUSkinningSamplerEditor : Editor
                 EditorGUILayout.BeginHorizontal();
                 {
                     GUILayout.FlexibleSpace();
-                    EditorGUILayout.PropertyField(serializedObject.FindProperty("texture"), new GUIContent());
+                    EditorGUILayout.PropertyField(serializedObject.FindProperty("boneTexture"), new GUIContent());
                 }
                 EditorGUILayout.EndHorizontal();
                 EditorGUILayout.Space();
@@ -385,12 +385,12 @@ public class GPUSkinningSamplerEditor : Editor
                 anim = sampler.anim;
                 mesh = sampler.savedMesh;
                 mtrl = sampler.savedMtrl;
-                texture = sampler.texture;
+                boneTexture = sampler.boneTexture;
                 if (mesh != null)
                 {
                     bounds = mesh.bounds;
                 }
-                if (anim == null || mesh == null || mtrl == null || texture == null)
+                if (anim == null || mesh == null || mtrl == null || boneTexture == null)
                 {
                     EditorUtility.DisplayDialog("GPUSkinning", "Missing Sampling Resources", "OK");
                 }
@@ -428,7 +428,7 @@ public class GPUSkinningSamplerEditor : Editor
                         previewGo.transform.position = new Vector3(999, 999, 1002);
                         preview = previewGo.AddComponent<GPUSkinningPlayerMono>();
                         preview.hideFlags = HideFlags.HideAndDontSave;
-                        preview.Init(anim, mesh, mtrl, texture);
+                        preview.Init(anim, mesh, mtrl, boneTexture);
                         preview.Player.RootMotionEnabled = rootMotionEnabled;
                         preview.Player.LODEnabled = false;
                         preview.Player.CullingMode = GPUSKinningCullingMode.AlwaysAnimate;
@@ -1562,9 +1562,9 @@ public class GPUSkinningSamplerEditor : Editor
                 serializedObject.FindProperty("savedShader").objectReferenceValue = obj;
             }
             obj = AssetDatabase.LoadMainAssetAtPath(GPUSkinningSampler.ReadTempData(GPUSkinningSampler.TEMP_SAVED_TEXTURE_PATH));
-            if(obj != null && obj is TextAsset)
+            if(obj != null && obj is Texture2D)
             {
-                serializedObject.FindProperty("texture").objectReferenceValue = obj;
+                serializedObject.FindProperty("boneTexture").objectReferenceValue = obj;
             }
 
             serializedObject.ApplyModifiedProperties();

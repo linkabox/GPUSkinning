@@ -587,7 +587,6 @@ public class GPUSkinningPlayer
             return;
         }
 
-        Matrix4x4[] matrices = frame.matrices;
         GPUSkinningBone[] bones = res.anim.bones;
         int numJoints = joints.Count;
         for(int i = 0; i < numJoints; ++i)

@@ -61,7 +61,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
     [HideInInspector]
     [SerializeField]
-    public TextAsset texture = null;
+    public Texture2D boneTexture = null;
 
     [HideInInspector]
     [SerializeField]
@@ -506,6 +506,9 @@ public class GPUSkinningSampler : MonoBehaviour
     private void CreateTextureMatrix(string dir, GPUSkinningAnimation gpuSkinningAnim)
     {
         Texture2D texture = new Texture2D(gpuSkinningAnim.textureWidth, gpuSkinningAnim.textureHeight, TextureFormat.RGBAHalf, false, true);
+	    texture.filterMode = FilterMode.Point;
+	    texture.wrapMode = TextureWrapMode.Clamp;
+	    texture.anisoLevel = 0;
         Color[] pixels = texture.GetPixels();
         int pixelIndex = 0;
         for (int clipIndex = 0; clipIndex < gpuSkinningAnim.clips.Length; ++clipIndex)
@@ -530,16 +533,19 @@ public class GPUSkinningSampler : MonoBehaviour
         texture.SetPixels(pixels);
         texture.Apply();
 
-        string savedPath = dir + "/GPUSKinning_Texture_" + animName + ".bytes";
-        using (FileStream fileStream = new FileStream(savedPath, FileMode.Create))
-        {
-            byte[] bytes = texture.GetRawTextureData();
-            fileStream.Write(bytes, 0, bytes.Length);
-            fileStream.Flush();
-            fileStream.Close();
-            fileStream.Dispose();
-        }
-        WriteTempData(TEMP_SAVED_TEXTURE_PATH, savedPath);
+	    string savedPath = dir + "/GPUSKinning_Texture_" + animName + ".asset";
+	    AssetDatabase.CreateAsset(texture, savedPath);
+	    WriteTempData(TEMP_SAVED_TEXTURE_PATH, savedPath);
+        //string savedPath = dir + "/GPUSKinning_Texture_" + animName + ".bytes";
+        //using (FileStream fileStream = new FileStream(savedPath, FileMode.Create))
+        //{
+        //    byte[] bytes = texture.GetRawTextureData();
+        //    fileStream.Write(bytes, 0, bytes.Length);
+        //    fileStream.Flush();
+        //    fileStream.Close();
+        //    fileStream.Dispose();
+        //}
+        //WriteTempData(TEMP_SAVED_TEXTURE_PATH, savedPath);
     }
 
     private void CalculateTextureSize(int numPixels, out int texWidth, out int texHeight)
