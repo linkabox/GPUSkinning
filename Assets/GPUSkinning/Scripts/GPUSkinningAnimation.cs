@@ -9,6 +9,8 @@ public class GPUSkinningAnimation : ScriptableObject
 
     public GPUSkinningBone[] bones = null;
 
+	public int exposeCount = 0;
+
     public int rootBoneIndex = 0;
 
     public GPUSkinningClip[] clips = null;

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -223,6 +224,7 @@ public class GPUSkinningSampler : MonoBehaviour
         if (anim != null) RestoreCustomBoneData(anim.bones, newBones);
         gpuSkinningAnimation.bones = newBones;
         gpuSkinningAnimation.rootBoneIndex = 0;
+		gpuSkinningAnimation.exposeCount = GetExposeBonesCount(newBones);
 
         int numClips = gpuSkinningAnimation.clips == null ? 0 : gpuSkinningAnimation.clips.Length;
         int overrideClipIndex = -1;
@@ -317,7 +319,22 @@ public class GPUSkinningSampler : MonoBehaviour
         }
     }
 
-    private void PrepareRecordAnimator()
+	private int GetExposeBonesCount(GPUSkinningBone[] bones)
+	{
+		int exposeCount = 0;
+		int numBones = bones == null ? 0 : bones.Length;
+		for (int i = 0; i < numBones; ++i)
+		{
+			if (bones[i].isExposed)
+			{
+				exposeCount++;
+			}
+		}
+
+		return exposeCount;
+	}
+
+	private void PrepareRecordAnimator()
     {
         if (animator != null)
         {
@@ -749,7 +766,9 @@ public class GPUSkinningSampler : MonoBehaviour
         GPUSkinningFrame frame = new GPUSkinningFrame();
         gpuSkinningClip.frames[samplingFrameIndex] = frame;
         frame.matrices = new Matrix4x4[gpuSkinningAnimation.bones.Length];
-        if (animation == null)
+		frame.jointMatrices = gpuSkinningAnimation.exposeCount > 0 ? new Matrix4x4[gpuSkinningAnimation.exposeCount] : null;
+
+		if (animation == null)
         {
             animator.playbackTime = time;
             animator.Update(0);
@@ -794,6 +813,21 @@ public class GPUSkinningSampler : MonoBehaviour
             }
             while (true);
         }
+
+		//Bake Exposed Joint Matrix
+		frame.rootMotionInv = frame.matrices[gpuSkinningAnimation.rootBoneIndex].inverse;
+	    if (frame.jointMatrices != null && frame.jointMatrices.Length > 0)
+	    {
+		    int jointIndex = 0;
+		    for(int i = 0; i < numBones; ++i)
+		    {
+			    if (bones[i].isExposed && jointIndex < frame.jointMatrices.Length)
+			    {
+				    Matrix4x4 jointMatrix = frame.matrices[i] * bones[i].BindposeInv;
+				    frame.jointMatrices[jointIndex++] = jointMatrix;
+			    }
+		    }
+	    }
 
         if(samplingFrameIndex == 0)
         {

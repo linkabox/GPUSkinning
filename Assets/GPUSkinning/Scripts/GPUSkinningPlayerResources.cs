@@ -236,7 +236,7 @@ public class GPUSkinningPlayerResources
         mpb.SetVector(shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation, new Vector4(frameIndex, playingClip.pixelSegmentation, 0, 0));
         if (rootMotionEnabled)
         {
-            Matrix4x4 rootMotionInv = frame.RootMotionInv(anim.rootBoneIndex);
+            Matrix4x4 rootMotionInv = frame.rootMotionInv;
             mpb.SetMatrix(shaderPropID_GPUSkinning_RootMotion, rootMotionInv);
         }
 
@@ -244,7 +244,7 @@ public class GPUSkinningPlayerResources
         {
             if (lastPlayedClip.rootMotionEnabled)
             {
-                mpb.SetMatrix(shaderPropID_GPUSkinning_RootMotion_CrossFade, lastPlayedClip.frames[frameIndex_crossFade].RootMotionInv(anim.rootBoneIndex));
+                mpb.SetMatrix(shaderPropID_GPUSkinning_RootMotion_CrossFade, lastPlayedClip.frames[frameIndex_crossFade].rootMotionInv);
             }
 
             mpb.SetVector(shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation_Blend_CrossFade,

@@ -582,12 +582,12 @@ public class GPUSkinningPlayer
 
     private void UpdateJoints(GPUSkinningFrame frame)
     {
-        if(joints == null)
-        {
+		if (joints == null || frame.jointMatrices == null || frame.jointMatrices.Length == 0)
+		{
             return;
         }
 
-        GPUSkinningBone[] bones = res.anim.bones;
+        //GPUSkinningBone[] bones = res.anim.bones;
         int numJoints = joints.Count;
         for(int i = 0; i < numJoints; ++i)
         {
@@ -595,13 +595,13 @@ public class GPUSkinningPlayer
             Transform jointTransform = Application.isPlaying ? joint.Transform : joint.transform;
             if (jointTransform != null)
             {
-                // TODO: Update Joint when Animation Blend
+				// TODO: Update Joint when Animation Blend
 
-                Matrix4x4 jointMatrix = frame.matrices[joint.BoneIndex] * bones[joint.BoneIndex].BindposeInv;
-                if(playingClip.rootMotionEnabled && rootMotionEnabled)
-                {
-                    jointMatrix = frame.RootMotionInv(res.anim.rootBoneIndex) * jointMatrix;
-                }
+	            Matrix4x4 jointMatrix = frame.jointMatrices[i];
+				if (playingClip.rootMotionEnabled && rootMotionEnabled)
+				{
+					jointMatrix = frame.rootMotionInv * jointMatrix;
+				}
 
                 jointTransform.localPosition = jointMatrix.MultiplyPoint(Vector3.zero);
 
