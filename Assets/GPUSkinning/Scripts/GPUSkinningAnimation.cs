@@ -26,4 +26,6 @@ public class GPUSkinningAnimation : ScriptableObject
     public Mesh[] lodMeshes = null;
 
     public float sphereRadius = 1.0f;
+
+	public GPUSkinningQuality skinQuality = GPUSkinningQuality.BONE_4;
 }

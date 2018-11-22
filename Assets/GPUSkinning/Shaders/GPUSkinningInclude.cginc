@@ -2,15 +2,17 @@
 #ifndef GPUSKINNING_INCLUDE
 #define GPUSKINNING_INCLUDE
 
-//#pragma multi_compile ROOTON_BLENDOFF ROOTON_BLENDON_CROSSFADEROOTON ROOTON_BLENDON_CROSSFADEROOTOFF ROOTOFF_BLENDOFF ROOTOFF_BLENDON_CROSSFADEROOTON ROOTOFF_BLENDON_CROSSFADEROOTOFF
 uniform sampler2D _boneTexture;
 uniform float3 _boneTextureParams; //x-textureWidth, y-textureHeight, z- bonePixelCount
 
 UNITY_INSTANCING_BUFFER_START(Props)
 UNITY_DEFINE_INSTANCED_PROP(float2, _frameInfo) //x-frameIndex, y-pixelSegment
 #define _frameInfo_arr Props
+
+#if defined(BLEND_ON)
 UNITY_DEFINE_INSTANCED_PROP(float3, _blendInfo) //x-frameIndex_crossFade, y-pixelSegment, z- crossFadeFactor
 #define _blendInfo_arr Props
+#endif
 UNITY_INSTANCING_BUFFER_END(Props)
 
 inline float4 indexToUV(float index)
@@ -35,15 +37,24 @@ inline float4 skinToPos(float4 vertex, float4 boneIndex, float4 boneWeight, floa
 {
 	float frameStartIndex = segment + frameIndex * _boneTextureParams.z;
 	half4x4 mat0 = getMatrix(frameStartIndex, boneIndex.x);
+#if BONE_2 || BONE_4
 	half4x4 mat1 = getMatrix(frameStartIndex, boneIndex.y);
+#endif
+
+#if BONE_4
 	half4x4 mat2 = getMatrix(frameStartIndex, boneIndex.z);
 	half4x4 mat3 = getMatrix(frameStartIndex, boneIndex.w);
+#endif
 
-	float4 pos = mul(mat0, vertex) * boneWeight.x +
-		mul(mat1, vertex) * boneWeight.y +
-		mul(mat2, vertex) * boneWeight.z +
-		mul(mat3, vertex) * boneWeight.w;
+	float4 pos = mul(mat0, vertex) * boneWeight.x;
+#if BONE_2 || BONE_4
+	pos = pos + mul(mat1, vertex) * boneWeight.y;
+#endif
 
+#if BONE_4
+	pos = pos + mul(mat2, vertex) * boneWeight.z;
+	pos = pos + mul(mat3, vertex) * boneWeight.w;
+#endif
 	return pos;
 }
 
@@ -57,10 +68,14 @@ inline float4 skinning(float4 vertex, float4 boneIndex, float4 boneWeight)
 	float2 frameInfo = UNITY_ACCESS_INSTANCED_PROP(_frameInfo_arr, _frameInfo);
 	float4 pos0 = skinToPos(vertex, boneIndex, boneWeight, frameInfo.x, frameInfo.y);
 
+#if BLEND_ON
 	float3 blendInfo = UNITY_ACCESS_INSTANCED_PROP(_blendInfo_arr, _blendInfo);
 	float4 pos1 = skinToPos(vertex, boneIndex, boneWeight, blendInfo.x, blendInfo.y);
 
 	return skin_blend(pos0, pos1, blendInfo.z);
+#else
+	return pos0;
+#endif
 }
 
 #endif

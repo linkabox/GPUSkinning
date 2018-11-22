@@ -420,14 +420,14 @@ public class GPUSkinningPlayer
         lastPlayingClip = playingClip;
         lastPlayingFrameIndex = frameIndex;
 
-        float blend_crossFade = 1;
+        //float blend_crossFade = 1;
         int frameIndex_crossFade = -1;
         GPUSkinningFrame frame_crossFade = null;
         if (res.IsCrossFadeBlending(lastPlayedClip, crossFadeTime, crossFadeProgress))
         {
             frameIndex_crossFade = GetCrossFadeFrameIndex();
             frame_crossFade = lastPlayedClip.frames[frameIndex_crossFade];
-            blend_crossFade = res.CrossFadeBlendFactor(crossFadeProgress, crossFadeTime);
+            //blend_crossFade = res.CrossFadeBlendFactor(crossFadeProgress, crossFadeTime);
         }
 
 		GPUSkinningFrame frame = playingClip.frames[frameIndex];
@@ -443,15 +443,15 @@ public class GPUSkinningPlayer
             UpdateJoints(frame);
         }
 
-        if (playingClip.rootMotionEnabled && rootMotionEnabled && frameIndex != rootMotionFrameIndex)
-        {
-            if (CullingMode != GPUSKinningCullingMode.CullCompletely)
-            {
-                rootMotionFrameIndex = frameIndex;
-                DoRootMotion(frame_crossFade, 1 - blend_crossFade, false);
-                DoRootMotion(frame, blend_crossFade, true);
-            }
-        }
+        //if (playingClip.rootMotionEnabled && rootMotionEnabled && frameIndex != rootMotionFrameIndex)
+        //{
+        //    if (CullingMode != GPUSKinningCullingMode.CullCompletely)
+        //    {
+        //        rootMotionFrameIndex = frameIndex;
+        //        DoRootMotion(frame_crossFade, 1 - blend_crossFade, false);
+        //        DoRootMotion(frame, blend_crossFade, true);
+        //    }
+        //}
 
         UpdateEvents(playingClip, frameIndex, frame_crossFade == null ? null : lastPlayedClip, frameIndex_crossFade);
     }
@@ -465,32 +465,15 @@ public class GPUSkinningPlayer
 
         if(playingClip == null)
         {
-            return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOff_BlendOff);
+            return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.BlendOff);
         }
-        if(playingClip.rootMotionEnabled && rootMotionEnabled)
-        {
-            if(res.IsCrossFadeBlending(lastPlayedClip, crossFadeTime, crossFadeProgress))
-            {
-                if(lastPlayedClip.rootMotionEnabled)
-                {
-                    return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOn_BlendOn_CrossFadeRootOn);
-                }
-                return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOn_BlendOn_CrossFadeRootOff);
-            }
-            return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOn_BlendOff);
-        }
+
         if(res.IsCrossFadeBlending(lastPlayedClip, crossFadeTime, crossFadeProgress))
         {
-            if (lastPlayedClip.rootMotionEnabled)
-            {
-                return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOff_BlendOn_CrossFadeRootOn);
-            }
-            return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOff_BlendOn_CrossFadeRootOff);
+            return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.BlendOn);
         }
-        else
-        {
-            return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.RootOff_BlendOff);
-        }
+
+	    return res.GetMaterial(GPUSkinningPlayerResources.MaterialState.BlendOff);
     }
 
     private void DoRootMotion(GPUSkinningFrame frame, float blend, bool doRotate)
@@ -598,10 +581,10 @@ public class GPUSkinningPlayer
 				// TODO: Update Joint when Animation Blend
 
 	            Matrix4x4 jointMatrix = frame.jointMatrices[i];
-				if (playingClip.rootMotionEnabled && rootMotionEnabled)
-				{
-					jointMatrix = frame.rootMotionInv * jointMatrix;
-				}
+				//if (playingClip.rootMotionEnabled && rootMotionEnabled)
+				//{
+				//	jointMatrix = frame.rootMotionInv * jointMatrix;
+				//}
 
                 jointTransform.localPosition = jointMatrix.MultiplyPoint(Vector3.zero);
 

@@ -75,7 +75,7 @@ public class GPUSkinningSamplerEditor : Editor
 	private GUIContent nullGuiContent = new GUIContent();
 	private GUIContent assetNameContent = new GUIContent("Asset Name");
 	private GUIContent skinQualityContent = new GUIContent("Skin Quality");
-	private GUIContent shaderTypeContent = new GUIContent("Shader Type");
+	private GUIContent shaderTypeContent = new GUIContent("Shader");
 	private GUIContent rootBoneContent = new GUIContent("Root Bone");
 
 	public override void OnInspectorGUI()
@@ -113,18 +113,15 @@ public class GPUSkinningSamplerEditor : Editor
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("anim"), nullGuiContent);
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("savedMesh"), nullGuiContent);
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("savedMtrl"), nullGuiContent);
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("savedShader"), nullGuiContent);
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("boneTexture"), nullGuiContent);
 				EditorGUILayout.Space();
 				GUI.enabled = true && guiEnabled;
 
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("skinQuality"), skinQualityContent);
 
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("shaderType"), shaderTypeContent);
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("savedShader"), shaderTypeContent);
 
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("rootBoneTransform"), rootBoneContent);
-
-				//EditorGUILayout.PropertyField(serializedObject.FindProperty("createNewShader"), new GUIContent("New Shader"));
 
 				OnGUI_AnimClips(sampler);
 

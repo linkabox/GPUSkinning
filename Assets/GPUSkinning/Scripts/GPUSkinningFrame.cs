@@ -15,7 +15,7 @@ public class GPUSkinningFrame
 
 	public Matrix4x4[] jointMatrices;
 
-	public Matrix4x4 rootMotionInv;
+	//public Matrix4x4 rootMotionInv;
 	//[System.NonSerialized]
 	//private bool rootMotionInvInit = false;
 	//[System.NonSerialized]
