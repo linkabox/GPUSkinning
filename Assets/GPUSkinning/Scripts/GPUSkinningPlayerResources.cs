@@ -54,7 +54,7 @@ public class GPUSkinningPlayerResources
 
 	//private static int shaderPropID_Blend_RootMotion = 0;
 
-	public GPUSkinningPlayerResources()
+	static GPUSkinningPlayerResources()
 	{
 		if (shaderPropID_BoneTexture == -1)
 		{
@@ -90,13 +90,7 @@ public class GPUSkinningPlayerResources
 			mtrls = null;
 		}
 
-		//if (boneTexture != null)
-		//{
-		//    Object.DestroyImmediate(boneTexture);
-		//    boneTexture = null;
-		//}
 		boneTexture = null;
-
 		if (players != null)
 		{
 			players.Clear();

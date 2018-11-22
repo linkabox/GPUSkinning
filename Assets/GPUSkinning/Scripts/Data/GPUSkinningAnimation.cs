@@ -5,7 +5,7 @@ public class GPUSkinningAnimation : ScriptableObject
 {
     public string guid = null;
 
-    public string name = null;
+    public string assetName = null;
 
     public GPUSkinningBone[] bones = null;
 

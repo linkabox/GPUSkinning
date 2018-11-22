@@ -12,7 +12,7 @@ public class GPUSkinningMaterial
     {
         if(material != null)
         {
-            Object.Destroy(material);
+            Object.DestroyImmediate(material);
             material = null;
         }
     }

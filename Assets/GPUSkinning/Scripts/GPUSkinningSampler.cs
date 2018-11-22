@@ -14,7 +14,7 @@ public class GPUSkinningSampler : MonoBehaviour
 #if UNITY_EDITOR
     [HideInInspector]
     [SerializeField]
-	public string animName = null;
+	public string assetName = null;
 
     [HideInInspector]
     [System.NonSerialized]
@@ -92,7 +92,7 @@ public class GPUSkinningSampler : MonoBehaviour
     [SerializeField]
     public bool updateOrNew = true;
 
-    private Animation animation = null;
+    private Animation legacyAnimation = null;
 
 	private Animator animator = null;
     private RuntimeAnimatorController runtimeAnimatorController = null;
@@ -137,7 +137,7 @@ public class GPUSkinningSampler : MonoBehaviour
 		string savePath = null;
 		if (anim == null)
 		{
-			savePath = EditorUtility.SaveFolderPanel("GPUSkinning Sampler Save", GetUserPreferDir(), animName);
+			savePath = EditorUtility.SaveFolderPanel("GPUSkinning Sampler Save", GetUserPreferDir(), assetName);
 		}
 		else
 		{
@@ -157,7 +157,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
 				string dir = "Assets" + savePath.Substring(Application.dataPath.Length);
 
-				string savedAnimPath = dir + "/GPUSKinning_Anim_" + animName + ".asset";
+				string savedAnimPath = dir + "/GPUSKinning_Anim_" + assetName + ".asset";
 				SetSthAboutTexture(gpuSkinningAnimation);
 				EditorUtility.SetDirty(gpuSkinningAnimation);
 				if (anim != gpuSkinningAnimation)
@@ -176,7 +176,7 @@ public class GPUSkinningSampler : MonoBehaviour
 					newMesh.bounds = savedMesh.bounds;
 				}
 
-				string savedMeshPath = dir + "/GPUSKinning_Mesh_" + animName + ".asset";
+				string savedMeshPath = dir + "/GPUSKinning_Mesh_" + assetName + ".asset";
 				AssetDatabase.CreateAsset(newMesh, savedMeshPath);
 				WriteTempData(TEMP_SAVED_MESH_PATH, savedMeshPath);
 				savedMesh = newMesh;
@@ -209,7 +209,7 @@ public class GPUSkinningSampler : MonoBehaviour
             return;
         }
 
-        if (string.IsNullOrEmpty(animName.Trim()))
+        if (string.IsNullOrEmpty(assetName.Trim()))
         {
             ShowDialog("Animation name is empty.");
             return;
@@ -263,7 +263,7 @@ public class GPUSkinningSampler : MonoBehaviour
 		samplingFrameIndex = 0;
 
 		gpuSkinningAnimation = anim == null ? ScriptableObject.CreateInstance<GPUSkinningAnimation>() : anim;
-		gpuSkinningAnimation.name = animName;
+		gpuSkinningAnimation.assetName = assetName;
 
         if(anim == null)
         {
@@ -409,20 +409,17 @@ public class GPUSkinningSampler : MonoBehaviour
 
     private void SetCurrentAnimationClip()
     {
-        if (animation == null)
+        if (legacyAnimation == null)
         {
             AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController();
             AnimationClip[] clips = runtimeAnimatorController.animationClips;
-            AnimationClipPair[] pairs = new AnimationClipPair[clips.Length];
+	        List<KeyValuePair<AnimationClip, AnimationClip>> overrideClips = new List<KeyValuePair<AnimationClip, AnimationClip>>(clips.Length);
             for (int i = 0; i < clips.Length; ++i)
             {
-                AnimationClipPair pair = new AnimationClipPair();
-                pairs[i] = pair;
-                pair.originalClip = clips[i];
-                pair.overrideClip = animClip;
+	            overrideClips.Add(new KeyValuePair<AnimationClip, AnimationClip>(clips[i], animClip));
             }
             animatorOverrideController.runtimeAnimatorController = runtimeAnimatorController;
-            animatorOverrideController.clips = pairs;
+            animatorOverrideController.ApplyOverrides(overrideClips);
             animator.runtimeAnimatorController = animatorOverrideController;
         }
     }
@@ -444,7 +441,7 @@ public class GPUSkinningSampler : MonoBehaviour
                 {
                     Mesh newMesh = CreateNewMesh(lodMesh, "GPUSkinning_Mesh_LOD" + (i + 1));
                     newMesh.bounds = bounds;
-                    string savedMeshPath = dir + "/GPUSKinning_Mesh_" + animName + "_LOD" + (i + 1) + ".asset";
+                    string savedMeshPath = dir + "/GPUSKinning_Mesh_" + assetName + "_LOD" + (i + 1) + ".asset";
                     AssetDatabase.CreateAsset(newMesh, savedMeshPath);
                     newMeshes.Add(newMesh);
                     newLodDistances.Add(lodDistances[i]);
@@ -604,7 +601,7 @@ public class GPUSkinningSampler : MonoBehaviour
         texture.SetPixels(pixels);
         texture.Apply();
 
-	    string savedPath = dir + "/GPUSKinning_Texture_" + animName + ".asset";
+	    string savedPath = dir + "/GPUSKinning_Texture_" + assetName + ".asset";
 	    AssetDatabase.CreateAsset(texture, savedPath);
 	    WriteTempData(TEMP_SAVED_TEXTURE_PATH, savedPath);
         //string savedPath = dir + "/GPUSKinning_Texture_" + animName + ".bytes";
@@ -634,7 +631,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
     public void MappingAnimationClips()
     {
-        if(animation == null)
+        if(legacyAnimation == null)
         {
             return;
         }
@@ -696,15 +693,15 @@ public class GPUSkinningSampler : MonoBehaviour
 
     private void Awake()
 	{
-        animation = GetComponent<Animation>();
+        legacyAnimation = GetComponent<Animation>();
 		animator = GetComponent<Animator>();
-        if (animator == null && animation == null)
+        if (animator == null && legacyAnimation == null)
         {
             DestroyImmediate(this);
             ShowDialog("Cannot find Animator Or Animation Component");
             return;
         }
-        if(animator != null && animation != null)
+        if(animator != null && legacyAnimation != null)
         {
             DestroyImmediate(this);
             ShowDialog("Animation is not coexisting with Animator");
@@ -729,11 +726,11 @@ public class GPUSkinningSampler : MonoBehaviour
             InitTransform();
             return;
         }
-        if(animation != null)
+        if(legacyAnimation != null)
         {
             MappingAnimationClips();
-            animation.Stop();
-            animation.cullingType = AnimationCullingType.AlwaysAnimate;
+            legacyAnimation.Stop();
+            legacyAnimation.cullingType = AnimationCullingType.AlwaysAnimate;
             InitTransform();
             return;
         }
@@ -766,20 +763,20 @@ public class GPUSkinningSampler : MonoBehaviour
         frame.matrices = new Matrix4x4[gpuSkinningAnimation.bones.Length];
 		frame.jointMatrices = gpuSkinningAnimation.exposeCount > 0 ? new Matrix4x4[gpuSkinningAnimation.exposeCount] : null;
 
-		if (animation == null)
+		if (legacyAnimation == null)
         {
             animator.playbackTime = time;
             animator.Update(0);
         }
         else
         {
-            animation.Stop();
-            AnimationState animState = animation[animClip.name];
+            legacyAnimation.Stop();
+            AnimationState animState = legacyAnimation[animClip.name];
             if(animState != null)
             {
                 animState.time = time;
-                animation.Sample();
-                animation.Play();
+                legacyAnimation.Sample();
+                legacyAnimation.Play();
             }
         }
         StartCoroutine(SamplingCoroutine(frame, totalFrams));
@@ -870,7 +867,7 @@ public class GPUSkinningSampler : MonoBehaviour
 			mtrl.CopyPropertiesFromMaterial(smr.sharedMaterial);
 		}
 
-		string savedMtrlPath = dir + "/GPUSKinning_Material_" + animName + ".mat";
+		string savedMtrlPath = dir + "/GPUSKinning_Material_" + assetName + ".mat";
 		AssetDatabase.CreateAsset(mtrl, savedMtrlPath);
 		WriteTempData(TEMP_SAVED_MTRL_PATH, savedMtrlPath);
 	}

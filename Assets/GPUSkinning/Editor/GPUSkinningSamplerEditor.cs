@@ -106,7 +106,7 @@ public class GPUSkinningSamplerEditor : Editor
 		{
 			GUI.enabled = guiEnabled;
 			{
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("animName"), assetNameContent);
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("assetName"), assetNameContent);
 
 				GUI.enabled = false;
 				EditorGUILayout.Space();
