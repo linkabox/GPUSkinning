@@ -84,7 +84,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
                 res.mesh = mesh;
                 res.InitMaterial(mtrl, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
 	            res.boneTexture = boneTexture;//GPUSkinningUtil.CreateTexture2D(boneTexture, anim);
-                res.boneTexture.hideFlags = HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor;
+                //res.boneTexture.hideFlags = HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor;
             }
 
             player = new GPUSkinningPlayer(gameObject, res);

@@ -73,10 +73,10 @@ public class GPUSkinningPlayerResources
         }
     }
 
-    ~GPUSkinningPlayerResources()
-    {
-        DestroyCullingGroup();
-    }
+    //~GPUSkinningPlayerResources()
+    //{
+    //    DestroyCullingGroup();
+    //}
 
     public void Destroy()
     {

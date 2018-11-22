@@ -41,7 +41,7 @@ public class GPUSkinningPlayerJoint : MonoBehaviour
 
     private void Awake()
     {
-        hideFlags = HideFlags.HideInInspector;
+        hideFlags = HideFlags.NotEditable;
         this.bone = transform;
     }
 
