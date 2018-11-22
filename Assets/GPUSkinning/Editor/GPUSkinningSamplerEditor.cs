@@ -8,6 +8,8 @@ using System.Collections.Generic;
 [CustomEditor(typeof(GPUSkinningSampler))]
 public class GPUSkinningSamplerEditor : Editor
 {
+	private const string resPath = "Assets/GPUSkinning/Editor/PreviewRes/";
+
 	private GPUSkinningAnimation anim = null;
 
 	private Mesh mesh = null;
@@ -382,7 +384,7 @@ public class GPUSkinningSamplerEditor : Editor
 				{
 					if (rt == null && !EditorApplication.isPlaying)
 					{
-						linearToGammeMtrl = new Material(Shader.Find("GPUSkinning/GPUSkinningSamplerEditor_LinearToGamma"));
+						linearToGammeMtrl = new Material(Shader.Find("Unlit/Texture"));
 						linearToGammeMtrl.hideFlags = HideFlags.HideAndDontSave;
 
 						rt = new RenderTexture(1024, 1024, 32, RenderTextureFormat.Default, RenderTextureReadWrite.Default);
@@ -402,7 +404,7 @@ public class GPUSkinningSamplerEditor : Editor
 						cam.targetTexture = rt;
 						cam.enabled = false;
 						cam.clearFlags = CameraClearFlags.SolidColor;
-						cam.backgroundColor = new Color(0.2f, 0.2f, 0.2f, 1);
+						cam.backgroundColor = new Color(0.4f, 0.4f, 0.4f, 1);
 						camGo.transform.position = new Vector3(999, 1002, 999);
 
 						previewClipIndex = 0;
@@ -1184,7 +1186,7 @@ public class GPUSkinningSamplerEditor : Editor
 	{
 		if (gridGos == null)
 		{
-			gridMtrl = new Material(Shader.Find("GPUSkinning/GPUSkinningSamplerEditor_Grid"));
+			gridMtrl = new Material(Shader.Find("Unlit/Color"));
 			gridMtrl.hideFlags = HideFlags.HideAndDontSave;
 			gridMtrl.color = Color.gray;
 
@@ -1210,13 +1212,14 @@ public class GPUSkinningSamplerEditor : Editor
 		{
 			arrowGos = new GameObject[3];
 			arrowMtrls = new Material[arrowGos.Length];
+			var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(resPath + "GPUSkinningSamplerEditor_Arrow.fbx");
 			for (int i = 0; i < arrowGos.Length; ++i)
 			{
-				GameObject go = Instantiate<GameObject>(Resources.Load<GameObject>("Model/GPUSkinningSamplerEditor_Arrow"));
+				GameObject go = Instantiate<GameObject>(prefab);
 				go.hideFlags = HideFlags.HideAndDontSave;
 				arrowGos[i] = go;
 
-				arrowMtrls[i] = new Material(Shader.Find("GPUSkinning/GPUSkinningSamplerEditor_UnlitColor"));
+				arrowMtrls[i] = new Material(Shader.Find("Unlit/Color"));
 				arrowMtrls[i].hideFlags = HideFlags.HideAndDontSave;
 
 				go.GetComponentInChildren<MeshRenderer>().sharedMaterial = arrowMtrls[i];
@@ -1253,7 +1256,7 @@ public class GPUSkinningSamplerEditor : Editor
 	{
 		if (boundsGos == null)
 		{
-			boundsMtrl = new Material(Shader.Find("GPUSkinning/GPUSkinningSamplerEditor_UnlitColor"));
+			boundsMtrl = new Material(Shader.Find("Unlit/Color"));
 			boundsMtrl.color = Color.white;
 
 			boundsGos = new GameObject[12];

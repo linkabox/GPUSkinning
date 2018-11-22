@@ -430,14 +430,14 @@ public class GPUSkinningPlayer
             blend_crossFade = res.CrossFadeBlendFactor(crossFadeProgress, crossFadeTime);
         }
 
-        GPUSkinningFrame frame = playingClip.frames[frameIndex];
+		GPUSkinningFrame frame = playingClip.frames[frameIndex];
         if (Visible || 
             CullingMode == GPUSKinningCullingMode.AlwaysAnimate)
         {
             res.Update(deltaTime, currMtrl);
             res.UpdatePlayingData(
                 mpb, playingClip, frameIndex, frame, playingClip.rootMotionEnabled && rootMotionEnabled,
-                lastPlayedClip, GetCrossFadeFrameIndex(), crossFadeTime, crossFadeProgress
+                lastPlayedClip, frameIndex_crossFade, crossFadeTime, crossFadeProgress
             );
             mr.SetPropertyBlock(mpb);
             UpdateJoints(frame);

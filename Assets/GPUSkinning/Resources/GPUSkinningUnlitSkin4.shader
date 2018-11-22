@@ -7,7 +7,7 @@
 
 	CGINCLUDE
 	#include "UnityCG.cginc"
-	#include "Assets/GPUSkinning/Resources/GPUSkinningInclude.cginc"
+	#include "GPUSkinningInclude.cginc"
 
 	struct appdata
 	{
@@ -33,7 +33,7 @@
 
 		v2f o;
 		
-		float4 pos = skin4(v.vertex, v.uv2, v.uv3);
+		float4 pos = skinning(v.vertex, v.uv2, v.uv3);
 
 		o.vertex = UnityObjectToClipPos(pos);
 		o.uv = TRANSFORM_TEX(v.uv, _MainTex);
@@ -58,7 +58,7 @@
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma multi_compile_instancing
-			#pragma multi_compile ROOTON_BLENDOFF ROOTON_BLENDON_CROSSFADEROOTON ROOTON_BLENDON_CROSSFADEROOTOFF ROOTOFF_BLENDOFF ROOTOFF_BLENDON_CROSSFADEROOTON ROOTOFF_BLENDON_CROSSFADEROOTOFF
+			//#pragma multi_compile ROOTON_BLENDOFF ROOTON_BLENDON_CROSSFADEROOTON ROOTON_BLENDON_CROSSFADEROOTOFF ROOTOFF_BLENDOFF ROOTOFF_BLENDON_CROSSFADEROOTON ROOTOFF_BLENDON_CROSSFADEROOTOFF
 			ENDCG
 		}
 	}

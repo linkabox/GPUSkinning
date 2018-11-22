@@ -441,19 +441,19 @@ public class GPUSkinningSampler : MonoBehaviour
 			GPUSkinningBone bone2 = GetBoneByTransform(smrBones[weights[2].index]);
 			GPUSkinningBone bone3 = GetBoneByTransform(smrBones[weights[3].index]);
 
-            Vector4 skinData_01 = new Vector4();
-			skinData_01.x = GetBoneIndex(bone0);
-			skinData_01.y = weights[0].weight;
-			skinData_01.z = GetBoneIndex(bone1);
-			skinData_01.w = weights[1].weight;
-			uv2[i] = skinData_01;
+            Vector4 boneIndexData = new Vector4();
+			boneIndexData.x = GetBoneIndex(bone0);
+			boneIndexData.y = GetBoneIndex(bone1);
+			boneIndexData.z = GetBoneIndex(bone2);
+			boneIndexData.w = GetBoneIndex(bone3);
+			uv2[i] = boneIndexData;
 
-			Vector4 skinData_23 = new Vector4();
-			skinData_23.x = GetBoneIndex(bone2);
-			skinData_23.y = weights[2].weight;
-			skinData_23.z = GetBoneIndex(bone3);
-			skinData_23.w = weights[3].weight;
-			uv3[i] = skinData_23;
+			Vector4 boneWeightData = new Vector4();
+			boneWeightData.x = weights[0].weight;
+			boneWeightData.y = weights[1].weight;
+			boneWeightData.z = weights[2].weight;
+			boneWeightData.w = weights[3].weight;
+			uv3[i] = boneWeightData;
         }
         newMesh.SetUVs(1, new List<Vector4>(uv2));
 		newMesh.SetUVs(2, new List<Vector4>(uv3));

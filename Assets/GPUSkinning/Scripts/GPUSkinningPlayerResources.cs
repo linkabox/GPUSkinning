@@ -48,28 +48,28 @@ public class GPUSkinningPlayerResources
         }
     }
 
-    private static int shaderPropID_GPUSkinning_TextureMatrix = -1;
+    private static int shaderPropID_BoneTexture = -1;
 
-    private static int shaderPropID_GPUSkinning_TextureSize_NumPixelsPerFrame = 0;
+    private static int shaderPropID_BoneTextureParams = 0;
 
-    private static int shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation = 0;
+    private static int shaderPorpID_FrameInfo = 0;
 
-    private static int shaderPropID_GPUSkinning_RootMotion = 0;
+    private static int shaderPropID_RootMotion = 0;
 
-    private static int shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation_Blend_CrossFade = 0;
+    private static int shaderPorpID_BlendInfo = 0;
 
-    private static int shaderPropID_GPUSkinning_RootMotion_CrossFade = 0;
+    private static int shaderPropID_Blend_RootMotion = 0;
 
     public GPUSkinningPlayerResources()
     {
-        if (shaderPropID_GPUSkinning_TextureMatrix == -1)
+        if (shaderPropID_BoneTexture == -1)
         {
-            shaderPropID_GPUSkinning_TextureMatrix = Shader.PropertyToID("_GPUSkinning_TextureMatrix");
-            shaderPropID_GPUSkinning_TextureSize_NumPixelsPerFrame = Shader.PropertyToID("_GPUSkinning_TextureSize_NumPixelsPerFrame");
-            shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation = Shader.PropertyToID("_GPUSkinning_FrameIndex_PixelSegmentation");
-            shaderPropID_GPUSkinning_RootMotion = Shader.PropertyToID("_GPUSkinning_RootMotion");
-            shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation_Blend_CrossFade = Shader.PropertyToID("_GPUSkinning_FrameIndex_PixelSegmentation_Blend_CrossFade");
-            shaderPropID_GPUSkinning_RootMotion_CrossFade = Shader.PropertyToID("_GPUSkinning_RootMotion_CrossFade");
+            shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");
+            shaderPropID_BoneTextureParams = Shader.PropertyToID("_boneTextureParams");
+            shaderPorpID_FrameInfo = Shader.PropertyToID("_frameInfo");
+            shaderPropID_RootMotion = Shader.PropertyToID("_rootMotion");
+            shaderPorpID_BlendInfo = Shader.PropertyToID("_blendInfo");
+            shaderPropID_Blend_RootMotion = Shader.PropertyToID("_blendRootMotion");
         }
     }
 
@@ -223,8 +223,8 @@ public class GPUSkinningPlayerResources
         if (mtrl.executeOncePerFrame.CanBeExecute())
         {
             mtrl.executeOncePerFrame.MarkAsExecuted();
-            mtrl.material.SetTexture(shaderPropID_GPUSkinning_TextureMatrix, boneTexture);
-            mtrl.material.SetVector(shaderPropID_GPUSkinning_TextureSize_NumPixelsPerFrame, 
+            mtrl.material.SetTexture(shaderPropID_BoneTexture, boneTexture);
+            mtrl.material.SetVector(shaderPropID_BoneTextureParams, 
                 new Vector4(anim.textureWidth, anim.textureHeight, anim.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
         }
     }
@@ -233,23 +233,28 @@ public class GPUSkinningPlayerResources
         MaterialPropertyBlock mpb, GPUSkinningClip playingClip, int frameIndex, GPUSkinningFrame frame, bool rootMotionEnabled,
         GPUSkinningClip lastPlayedClip, int frameIndex_crossFade, float crossFadeTime, float crossFadeProgress)
     {
-        mpb.SetVector(shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation, new Vector4(frameIndex, playingClip.pixelSegmentation, 0, 0));
+        mpb.SetVector(shaderPorpID_FrameInfo, new Vector4(frameIndex, playingClip.pixelSegmentation, 0, 0));
         if (rootMotionEnabled)
         {
             Matrix4x4 rootMotionInv = frame.rootMotionInv;
-            mpb.SetMatrix(shaderPropID_GPUSkinning_RootMotion, rootMotionInv);
+            mpb.SetMatrix(shaderPropID_RootMotion, rootMotionInv);
         }
 
         if (IsCrossFadeBlending(lastPlayedClip, crossFadeTime, crossFadeProgress))
         {
             if (lastPlayedClip.rootMotionEnabled)
             {
-                mpb.SetMatrix(shaderPropID_GPUSkinning_RootMotion_CrossFade, lastPlayedClip.frames[frameIndex_crossFade].rootMotionInv);
+                mpb.SetMatrix(shaderPropID_Blend_RootMotion, lastPlayedClip.frames[frameIndex_crossFade].rootMotionInv);
             }
 
-            mpb.SetVector(shaderPorpID_GPUSkinning_FrameIndex_PixelSegmentation_Blend_CrossFade,
+            mpb.SetVector(shaderPorpID_BlendInfo,
                 new Vector4(frameIndex_crossFade, lastPlayedClip.pixelSegmentation, CrossFadeBlendFactor(crossFadeProgress, crossFadeTime)));
         }
+        else
+        {
+			mpb.SetVector(shaderPorpID_BlendInfo,
+				new Vector4(0, 0, 1, 0));
+		}
     }
 
     public float CrossFadeBlendFactor(float crossFadeProgress, float crossFadeTime)
