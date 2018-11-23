@@ -413,7 +413,7 @@ public class GPUSkinningSamplerEditor : Editor
 						previewGo.transform.position = new Vector3(999, 999, 1002);
 						preview = previewGo.AddComponent<GPUSkinningPlayerMono>();
 						preview.hideFlags = hideFlags;
-						preview.InitRes(anim, mesh, mtrl, boneTexture);
+						preview.InitRes(anim);
 						preview.Player.RootMotionEnabled = rootMotionEnabled;
 						preview.Player.LODEnabled = false;
 						preview.Player.CullingMode = GPUSKinningCullingMode.AlwaysAnimate;
@@ -970,9 +970,6 @@ public class GPUSkinningSamplerEditor : Editor
 			OnGUI_LODDistancesChecking(sampler);
 		}
 		EditorGUILayout.EndVertical();
-
-		EditorGUILayout.Space();
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("sphereRadius"));
 	}
 
 	private void OnGUI_LODDistancesChecking(GPUSkinningSampler sampler)

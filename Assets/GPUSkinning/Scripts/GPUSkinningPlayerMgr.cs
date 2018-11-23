@@ -6,11 +6,11 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 {
 	private readonly List<GPUSkinningPlayerResources> _playerResList = new List<GPUSkinningPlayerResources>();
 
-	public void Register(GPUSkinningAnimation anim, Mesh mesh, Material originalMtrl, Texture2D boneTexture, GPUSkinningPlayerMono player, out GPUSkinningPlayerResources result)
+	public void Register(GPUSkinningAnimation animData, GPUSkinningPlayerMono player, out GPUSkinningPlayerResources result)
 	{
 		result = null;
 
-		if (anim == null || originalMtrl == null || boneTexture == null || player == null)
+		if (animData == null || player == null)
 		{
 			return;
 		}
@@ -20,7 +20,7 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 		int numItems = _playerResList.Count;
 		for (int i = 0; i < numItems; ++i)
 		{
-			if (_playerResList[i].anim.guid == anim.guid)
+			if (_playerResList[i].animData.guid == animData.guid)
 			{
 				res = _playerResList[i];
 				break;
@@ -33,22 +33,12 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 			_playerResList.Add(res);
 		}
 
-		if (res.anim == null)
+		if (res.animData == null)
 		{
-			res.anim = anim;
+			res.animData = animData;
 		}
 
-		if (res.mesh == null)
-		{
-			res.mesh = mesh;
-		}
-
-		res.InitMaterial(originalMtrl, HideFlags.None);
-
-		if (res.boneTexture == null)
-		{
-			res.boneTexture = boneTexture; //GPUSkinningUtil.CreateTexture2D(textureRawData, anim);
-		}
+		res.InitMaterial(animData.material, HideFlags.None);
 
 		if (!res.players.Contains(player))
 		{

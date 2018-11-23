@@ -224,7 +224,7 @@ public class GPUSkinningPlayer
 
 		GPUSkinningMaterial mtrl = GetCurrentMaterial();
 		mr.sharedMaterial = mtrl == null ? null : mtrl.material;
-		mf.sharedMesh = res.mesh;
+		mf.sharedMesh = res.animData.defaultMesh;
 
 		mpb = new MaterialPropertyBlock();
 
@@ -233,7 +233,7 @@ public class GPUSkinningPlayer
 
 	public void Play(string clipName)
 	{
-		GPUSkinningClip[] clips = _res.anim.clips;
+		GPUSkinningClip[] clips = _res.animData.clips;
 		int numClips = clips == null ? 0 : clips.Length;
 		for (int i = 0; i < numClips; ++i)
 		{
@@ -258,7 +258,7 @@ public class GPUSkinningPlayer
 		}
 		else
 		{
-			GPUSkinningClip[] clips = _res.anim.clips;
+			GPUSkinningClip[] clips = _res.animData.clips;
 			int numClips = clips == null ? 0 : clips.Length;
 			for (int i = 0; i < numClips; ++i)
 			{
@@ -299,7 +299,7 @@ public class GPUSkinningPlayer
 	{
 		if (!LODEnabled)
 		{
-			mesh = _res.mesh;
+			mesh = _res.animData.defaultMesh;
 		}
 
 		if (mf != null && mf.sharedMesh != mesh)
@@ -612,7 +612,7 @@ public class GPUSkinningPlayer
 		{
 			GPUSkinningPlayerJoint[] existingJoints = go.GetComponentsInChildren<GPUSkinningPlayerJoint>();
 
-			GPUSkinningBone[] bones = _res.anim.bones;
+			GPUSkinningBone[] bones = _res.animData.bones;
 			int numBones = bones == null ? 0 : bones.Length;
 			for (int i = 0; i < numBones; ++i)
 			{

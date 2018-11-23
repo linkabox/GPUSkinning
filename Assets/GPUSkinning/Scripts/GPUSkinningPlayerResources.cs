@@ -11,11 +11,7 @@ public class GPUSkinningPlayerResources
 		Count = 2
 	}
 
-	public GPUSkinningAnimation anim = null;
-
-	public Mesh mesh = null;
-
-	public Texture2D boneTexture = null;
+	public GPUSkinningAnimation animData = null;
 
 	public List<GPUSkinningPlayerMono> players = new List<GPUSkinningPlayerMono>();
 
@@ -42,35 +38,20 @@ public class GPUSkinningPlayerResources
 		}
 	}
 
-	private static int shaderPropID_BoneTexture = -1;
+	private static readonly int shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");
 
-	private static int shaderPropID_BoneTextureParams = 0;
+	private static readonly int shaderPropID_BoneTextureParams = Shader.PropertyToID("_boneTextureParams");
 
-	private static int shaderPorpID_FrameInfo = 0;
+	private static readonly int shaderPorpID_FrameInfo = Shader.PropertyToID("_frameInfo");
 
-	//private static int shaderPropID_RootMotion = 0;
+	private static readonly int shaderPorpID_BlendInfo = Shader.PropertyToID("_blendInfo");
 
-	private static int shaderPorpID_BlendInfo = 0;
-
-	//private static int shaderPropID_Blend_RootMotion = 0;
-
-	static GPUSkinningPlayerResources()
-	{
-		if (shaderPropID_BoneTexture == -1)
-		{
-			shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");
-			shaderPropID_BoneTextureParams = Shader.PropertyToID("_boneTextureParams");
-			shaderPorpID_FrameInfo = Shader.PropertyToID("_frameInfo");
-			shaderPorpID_BlendInfo = Shader.PropertyToID("_blendInfo");
-			//shaderPropID_RootMotion = Shader.PropertyToID("_rootMotion");
-			//shaderPropID_Blend_RootMotion = Shader.PropertyToID("_blendRootMotion");
-		}
-	}
+	//private static int shaderPropID_RootMotion = Shader.PropertyToID("_rootMotion");
+	//private static int shaderPropID_Blend_RootMotion = Shader.PropertyToID("_blendRootMotion");
 
 	public void Destroy()
 	{
-		anim = null;
-		mesh = null;
+		animData = null;
 
 		if (_cullingBounds != null)
 		{
@@ -90,7 +71,6 @@ public class GPUSkinningPlayerResources
 			mtrls = null;
 		}
 
-		boneTexture = null;
 		if (players != null)
 		{
 			players.Clear();
@@ -104,7 +84,7 @@ public class GPUSkinningPlayerResources
 		{
 			_cullingGroup = new CullingGroup();
 			_cullingGroup.targetCamera = Camera.main;
-			_cullingGroup.SetBoundingDistances(anim.lodDistances);
+			_cullingGroup.SetBoundingDistances(animData.lodDistances);
 			_cullingGroup.SetDistanceReferencePoint(Camera.main.transform);
 			_cullingGroup.onStateChanged = OnLodCullingGroupOnStateChangedHandler;
 		}
@@ -170,13 +150,13 @@ public class GPUSkinningPlayerResources
 		Mesh lodMesh = null;
 		if (index == 0)
 		{
-			lodMesh = this.mesh;
+			lodMesh = this.animData.defaultMesh;
 		}
 		else
 		{
-			Mesh[] lodMeshes = anim.lodMeshes;
-			lodMesh = lodMeshes == null || lodMeshes.Length == 0 ? this.mesh : lodMeshes[Mathf.Min(index - 1, lodMeshes.Length - 1)];
-			if (lodMesh == null) lodMesh = this.mesh;
+			Mesh[] lodMeshes = animData.lodMeshes;
+			lodMesh = lodMeshes == null || lodMeshes.Length == 0 ? this.animData.defaultMesh : lodMeshes[Mathf.Min(index - 1, lodMeshes.Length - 1)];
+			if (lodMesh == null) lodMesh = this.animData.defaultMesh;
 		}
 		player.SetLODMesh(lodMesh);
 	}
@@ -189,7 +169,7 @@ public class GPUSkinningPlayerResources
 			GPUSkinningPlayerMono player = players[i];
 			BoundingSphere bounds = _cullingBounds[i];
 			bounds.position = player.Player.Position;
-			bounds.radius = anim.sphereRadius;
+			bounds.radius = 1f;
 			_cullingBounds[i] = bounds;
 		}
 	}
@@ -206,9 +186,9 @@ public class GPUSkinningPlayerResources
 		if (mtrl.executeOncePerFrame.CanBeExecute())
 		{
 			mtrl.executeOncePerFrame.MarkAsExecuted();
-			mtrl.material.SetTexture(shaderPropID_BoneTexture, boneTexture);
+			mtrl.material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
 			mtrl.material.SetVector(shaderPropID_BoneTextureParams,
-				new Vector4(anim.textureWidth, anim.textureHeight, anim.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
+				new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
 		}
 	}
 
@@ -267,10 +247,10 @@ public class GPUSkinningPlayerResources
 		for (int i = 0; i < mtrls.Length; ++i)
 		{
 			mtrls[i] = new GPUSkinningMaterial() { material = new Material(originalMaterial) };
-			mtrls[i].material.name = anim.skinQuality + "_" + ShaderKeywords[i];
+			mtrls[i].material.name = animData.skinQuality + "_" + ShaderKeywords[i];
 			mtrls[i].material.hideFlags = hideFlags;
 			mtrls[i].material.enableInstancing = true; // enable instancing in Unity 5.6
-			mtrls[i].material.EnableKeyword(anim.skinQuality.ToString());
+			mtrls[i].material.EnableKeyword(animData.skinQuality.ToString());
 			EnableKeywords(i, mtrls[i]);
 		}
 	}

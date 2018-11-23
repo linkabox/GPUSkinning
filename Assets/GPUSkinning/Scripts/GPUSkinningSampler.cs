@@ -49,10 +49,6 @@ public class GPUSkinningSampler : MonoBehaviour
 	public float[] lodDistances = null;
 
 	[HideInInspector]
-	[SerializeField]
-	private float sphereRadius = 1.0f;
-
-	[HideInInspector]
 	[System.NonSerialized]
 	public int samplingClipIndex = -1;
 
@@ -99,7 +95,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
 	private SkinnedMeshRenderer smr = null;
 
-	private GPUSkinningAnimation gpuSkinningAnimation = null;
+	private GPUSkinningAnimation _tmpAnimData = null;
 
 	private GPUSkinningClip gpuSkinningClip = null;
 
@@ -182,18 +178,22 @@ public class GPUSkinningSampler : MonoBehaviour
 				string dir = "Assets" + savePath.Substring(Application.dataPath.Length);
 
 				string savedAnimPath = dir + "/GPUSKinning_Anim_" + assetName + ".asset";
-				SetSthAboutTexture(gpuSkinningAnimation);
-				EditorUtility.SetDirty(gpuSkinningAnimation);
-				if (anim != gpuSkinningAnimation)
+				SetSthAboutTexture(_tmpAnimData);
+				EditorUtility.SetDirty(_tmpAnimData);
+				if (anim != _tmpAnimData)
 				{
-					AssetDatabase.CreateAsset(gpuSkinningAnimation, savedAnimPath);
+					AssetDatabase.CreateAsset(_tmpAnimData, savedAnimPath);
 				}
 
+				//AnimData
 				WriteTempData(TEMP_SAVED_ANIM_PATH, savedAnimPath);
-				anim = gpuSkinningAnimation;
+				anim = _tmpAnimData;
 
+				//Texture
 				boneTexture = CreateTextureMatrix(dir, anim);
+				anim.boneTexture = boneTexture;
 
+				//Mesh
 				Mesh newMesh = CreateNewMesh(smr.sharedMesh, "GPUSkinning_Mesh");
 				if (savedMesh != null)
 				{
@@ -208,10 +208,14 @@ public class GPUSkinningSampler : MonoBehaviour
 				AssetDatabase.CreateAsset(newMesh, savedMeshPath);
 				WriteTempData(TEMP_SAVED_MESH_PATH, savedMeshPath);
 				savedMesh = newMesh;
+				anim.defaultMesh = savedMesh;
+				CreateLODMeshes(anim, newMesh.bounds, dir);
 
+				//Material
 				savedMtrl = CreateShaderAndMaterial(dir);
+				anim.material = savedMtrl;
 
-				CreateLODMeshes(newMesh.bounds, dir);
+				EditorUtility.SetDirty(anim);
 			}
 		}
 
@@ -290,12 +294,12 @@ public class GPUSkinningSampler : MonoBehaviour
 
 		samplingFrameIndex = 0;
 
-		gpuSkinningAnimation = anim == null ? ScriptableObject.CreateInstance<GPUSkinningAnimation>() : anim;
-		gpuSkinningAnimation.assetName = assetName;
+		_tmpAnimData = anim == null ? ScriptableObject.CreateInstance<GPUSkinningAnimation>() : anim;
+		_tmpAnimData.assetName = assetName;
 
 		if (anim == null)
 		{
-			gpuSkinningAnimation.guid = System.Guid.NewGuid().ToString();
+			_tmpAnimData.guid = System.Guid.NewGuid().ToString();
 		}
 
 		List<GPUSkinningBone> bones_result = new List<GPUSkinningBone>();
@@ -303,16 +307,16 @@ public class GPUSkinningSampler : MonoBehaviour
 		GPUSkinningBone[] newBones = bones_result.ToArray();
 		GenerateBonesGUID(newBones);
 		if (anim != null) RestoreCustomBoneData(anim.bones, newBones);
-		gpuSkinningAnimation.bones = newBones;
-		gpuSkinningAnimation.rootBoneIndex = 0;
-		gpuSkinningAnimation.exposeCount = GetExposeBonesCount(newBones);
-		gpuSkinningAnimation.skinQuality = skinQuality;
+		_tmpAnimData.bones = newBones;
+		_tmpAnimData.rootBoneIndex = 0;
+		_tmpAnimData.exposeCount = GetExposeBonesCount(newBones);
+		_tmpAnimData.skinQuality = skinQuality;
 
-		int numClips = gpuSkinningAnimation.clips == null ? 0 : gpuSkinningAnimation.clips.Length;
+		int numClips = _tmpAnimData.clips == null ? 0 : _tmpAnimData.clips.Length;
 		int overrideClipIndex = -1;
 		for (int i = 0; i < numClips; ++i)
 		{
-			if (gpuSkinningAnimation.clips[i].name == animClip.name)
+			if (_tmpAnimData.clips[i].name == animClip.name)
 			{
 				overrideClipIndex = i;
 				break;
@@ -328,23 +332,23 @@ public class GPUSkinningSampler : MonoBehaviour
 		gpuSkinningClip.rootMotionEnabled = rootMotionEnabled[samplingClipIndex];
 		gpuSkinningClip.individualDifferenceEnabled = individualDifferenceEnabled[samplingClipIndex];
 
-		if (gpuSkinningAnimation.clips == null)
+		if (_tmpAnimData.clips == null)
 		{
-			gpuSkinningAnimation.clips = new GPUSkinningClip[] { gpuSkinningClip };
+			_tmpAnimData.clips = new GPUSkinningClip[] { gpuSkinningClip };
 		}
 		else
 		{
 			if (overrideClipIndex == -1)
 			{
-				List<GPUSkinningClip> clips = new List<GPUSkinningClip>(gpuSkinningAnimation.clips);
+				List<GPUSkinningClip> clips = new List<GPUSkinningClip>(_tmpAnimData.clips);
 				clips.Add(gpuSkinningClip);
-				gpuSkinningAnimation.clips = clips.ToArray();
+				_tmpAnimData.clips = clips.ToArray();
 			}
 			else
 			{
-				GPUSkinningClip overridedClip = gpuSkinningAnimation.clips[overrideClipIndex];
+				GPUSkinningClip overridedClip = _tmpAnimData.clips[overrideClipIndex];
 				RestoreCustomClipData(overridedClip, gpuSkinningClip);
-				gpuSkinningAnimation.clips[overrideClipIndex] = gpuSkinningClip;
+				_tmpAnimData.clips[overrideClipIndex] = gpuSkinningClip;
 			}
 		}
 
@@ -452,11 +456,10 @@ public class GPUSkinningSampler : MonoBehaviour
 		}
 	}
 
-	private void CreateLODMeshes(Bounds bounds, string dir)
+	private void CreateLODMeshes(GPUSkinningAnimation animData, Bounds bounds, string dir)
 	{
-		gpuSkinningAnimation.lodMeshes = null;
-		gpuSkinningAnimation.lodDistances = null;
-		gpuSkinningAnimation.sphereRadius = sphereRadius;
+		animData.lodMeshes = null;
+		animData.lodDistances = null;
 
 		if (lodMeshes != null)
 		{
@@ -475,13 +478,11 @@ public class GPUSkinningSampler : MonoBehaviour
 					newLodDistances.Add(lodDistances[i]);
 				}
 			}
-			gpuSkinningAnimation.lodMeshes = newMeshes.ToArray();
+			animData.lodMeshes = newMeshes.ToArray();
 
 			newLodDistances.Add(9999);
-			gpuSkinningAnimation.lodDistances = newLodDistances.ToArray();
+			animData.lodDistances = newLodDistances.ToArray();
 		}
-
-		EditorUtility.SetDirty(gpuSkinningAnimation);
 	}
 
 	private Mesh CreateNewMesh(Mesh mesh, string meshName)
@@ -779,8 +780,8 @@ public class GPUSkinningSampler : MonoBehaviour
 		float time = gpuSkinningClip.length * ((float)samplingFrameIndex / totalFrams);
 		GPUSkinningFrame frame = new GPUSkinningFrame();
 		gpuSkinningClip.frames[samplingFrameIndex] = frame;
-		frame.matrices = new Matrix4x4[gpuSkinningAnimation.bones.Length];
-		frame.jointMatrices = gpuSkinningAnimation.exposeCount > 0 ? new Matrix4x4[gpuSkinningAnimation.exposeCount] : null;
+		frame.matrices = new Matrix4x4[_tmpAnimData.bones.Length];
+		frame.jointMatrices = _tmpAnimData.exposeCount > 0 ? new Matrix4x4[_tmpAnimData.exposeCount] : null;
 
 		if (legacyAnimation == null)
 		{
@@ -805,7 +806,7 @@ public class GPUSkinningSampler : MonoBehaviour
 	{
 		yield return new WaitForEndOfFrame();
 
-		GPUSkinningBone[] bones = gpuSkinningAnimation.bones;
+		GPUSkinningBone[] bones = _tmpAnimData.bones;
 		int numBones = bones.Length;
 		for (int i = 0; i < numBones; ++i)
 		{
@@ -845,13 +846,13 @@ public class GPUSkinningSampler : MonoBehaviour
 
 		if (samplingFrameIndex == 0)
 		{
-			rootMotionPosition = bones[gpuSkinningAnimation.rootBoneIndex].transform.localPosition;
-			rootMotionRotation = bones[gpuSkinningAnimation.rootBoneIndex].transform.localRotation;
+			rootMotionPosition = bones[_tmpAnimData.rootBoneIndex].transform.localPosition;
+			rootMotionRotation = bones[_tmpAnimData.rootBoneIndex].transform.localRotation;
 		}
 		else
 		{
-			Vector3 newPosition = bones[gpuSkinningAnimation.rootBoneIndex].transform.localPosition;
-			Quaternion newRotation = bones[gpuSkinningAnimation.rootBoneIndex].transform.localRotation;
+			Vector3 newPosition = bones[_tmpAnimData.rootBoneIndex].transform.localPosition;
+			Quaternion newRotation = bones[_tmpAnimData.rootBoneIndex].transform.localRotation;
 			Vector3 deltaPosition = newPosition - rootMotionPosition;
 			frame.rootMotionDeltaPositionQ = Quaternion.Inverse(Quaternion.Euler(transform.forward.normalized)) * Quaternion.Euler(deltaPosition.normalized);
 			frame.rootMotionDeltaPositionL = deltaPosition.magnitude;
@@ -894,7 +895,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
 	private GPUSkinningBone GetBoneByTransform(Transform transform)
 	{
-		GPUSkinningBone[] bones = gpuSkinningAnimation.bones;
+		GPUSkinningBone[] bones = _tmpAnimData.bones;
 		int numBones = bones.Length;
 		for (int i = 0; i < numBones; ++i)
 		{
@@ -908,7 +909,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
 	private int GetBoneIndex(GPUSkinningBone bone)
 	{
-		return System.Array.IndexOf(gpuSkinningAnimation.bones, bone);
+		return System.Array.IndexOf(_tmpAnimData.bones, bone);
 	}
 
 	public static void ShowDialog(string msg)

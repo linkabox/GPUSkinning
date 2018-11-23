@@ -7,19 +7,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 {
 	[HideInInspector]
 	[SerializeField]
-	private GPUSkinningAnimation anim = null;
-
-	[HideInInspector]
-	[SerializeField]
-	private Mesh mesh = null;
-
-	[HideInInspector]
-	[SerializeField]
-	private Material mtrl = null;
-
-	[HideInInspector]
-	[SerializeField]
-	private Texture2D boneTexture = null;
+	private GPUSkinningAnimation animData = null;
 
 	[HideInInspector]
 	[SerializeField]
@@ -46,7 +34,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		}
 	}
 
-	public void InitRes(GPUSkinningAnimation anim = null, Mesh mesh = null, Material mtrl = null, Texture2D boneTexture = null)
+	public void InitRes(GPUSkinningAnimation anim = null)
 	{
 		if (player != null)
 		{
@@ -54,22 +42,17 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		}
 
 		if (anim != null)
-			this.anim = anim;
-		if (mesh != null)
-			this.mesh = mesh;
-		if (mtrl != null)
-			this.mtrl = mtrl;
-		if (boneTexture != null)
-			this.boneTexture = boneTexture;
+			this.animData = anim;
 
-		var res = new GPUSkinningPlayerResources
+		if (this.animData != null)
 		{
-			anim = this.anim,
-			mesh = this.mesh,
-			boneTexture = this.boneTexture
-		};
-		res.InitMaterial(this.mtrl, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
-		Init(res);
+			var res = new GPUSkinningPlayerResources
+			{
+				animData = this.animData,
+			};
+			res.InitMaterial(this.animData.material, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
+			Init(res);
+		}
 	}
 
 	public void Init(GPUSkinningPlayerResources res = null)
@@ -79,11 +62,11 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 			return;
 		}
 
-		if (anim != null && mesh != null && mtrl != null && boneTexture != null)
+		if (animData != null)
 		{
 			if (res == null)
 			{
-				GPUSkinningPlayerMgr.Instance.Register(anim, mesh, mtrl, boneTexture, this, out res);
+				GPUSkinningPlayerMgr.Instance.Register(animData, this, out res);
 			}
 
 			player = new GPUSkinningPlayer(gameObject, res);
@@ -91,10 +74,10 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 			player.LODEnabled = lodEnabled;
 			player.CullingMode = cullingMode;
 
-			if (anim != null && anim.clips != null && anim.clips.Length > 0)
+			if (animData != null && animData.clips != null && animData.clips.Length > 0)
 			{
-				int defaultClip = Mathf.Clamp(defaultPlayingClipIndex, 0, anim.clips.Length);
-				player.Play(anim.clips[defaultClip].name);
+				int defaultClip = Mathf.Clamp(defaultPlayingClipIndex, 0, animData.clips.Length);
+				player.Play(animData.clips[defaultClip].name);
 			}
 		}
 	}
@@ -177,9 +160,6 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 #endif
 
 		player = null;
-		anim = null;
-		mesh = null;
-		mtrl = null;
-		boneTexture = null;
+		animData = null;
 	}
 }
