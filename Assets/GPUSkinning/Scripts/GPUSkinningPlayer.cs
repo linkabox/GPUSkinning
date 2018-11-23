@@ -698,4 +698,13 @@ public class GPUSkinningPlayer
 			}
 		}
 	}
+
+	public void Destroy()
+	{
+		if (_res != null)
+		{
+			_res.Destroy();
+			_res = null;
+		}
+	}
 }

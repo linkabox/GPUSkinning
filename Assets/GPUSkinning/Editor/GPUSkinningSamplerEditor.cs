@@ -10,6 +10,8 @@ public class GPUSkinningSamplerEditor : Editor
 {
 	private const string resPath = "Assets/GPUSkinning/Editor/PreviewRes/";
 
+	private GPUSkinningSampler sampler;
+
 	private GPUSkinningAnimation anim = null;
 
 	private Mesh mesh = null;
@@ -80,7 +82,6 @@ public class GPUSkinningSamplerEditor : Editor
 
 	public override void OnInspectorGUI()
 	{
-		GPUSkinningSampler sampler = target as GPUSkinningSampler;
 		if (sampler == null)
 		{
 			return;
@@ -381,22 +382,23 @@ public class GPUSkinningSamplerEditor : Editor
 				{
 					if (rt == null && !EditorApplication.isPlaying)
 					{
+						HideFlags hideFlags = HideFlags.DontSave | HideFlags.NotEditable;
 						linearToGammeMtrl = new Material(Shader.Find("Unlit/Texture"));
-						linearToGammeMtrl.hideFlags = HideFlags.HideAndDontSave;
+						linearToGammeMtrl.hideFlags = hideFlags;
 
 						rt = new RenderTexture(1024, 1024, 32, RenderTextureFormat.Default, RenderTextureReadWrite.Default);
-						rt.hideFlags = HideFlags.HideAndDontSave;
+						rt.hideFlags = hideFlags;
 
 						if (PlayerSettings.colorSpace == ColorSpace.Linear)
 						{
 							rtGamma = new RenderTexture(512, 512, 0, RenderTextureFormat.Default, RenderTextureReadWrite.Linear);
-							rtGamma.hideFlags = HideFlags.HideAndDontSave;
+							rtGamma.hideFlags = hideFlags;
 						}
 
-						GameObject camGo = new GameObject("GPUSkinningSamplerEditor_CameraGo");
-						camGo.hideFlags = HideFlags.HideAndDontSave;
+						GameObject camGo = new GameObject("[Preview]GSkin_Camera");
+						camGo.hideFlags = hideFlags;
 						cam = camGo.AddComponent<Camera>();
-						cam.hideFlags = HideFlags.HideAndDontSave;
+						cam.hideFlags = hideFlags;
 						cam.farClipPlane = 100;
 						cam.targetTexture = rt;
 						cam.enabled = false;
@@ -406,12 +408,12 @@ public class GPUSkinningSamplerEditor : Editor
 
 						previewClipIndex = 0;
 
-						GameObject previewGo = new GameObject("GPUSkinningPreview_Go");
-						previewGo.hideFlags = HideFlags.HideAndDontSave;
+						GameObject previewGo = new GameObject("[Preview]GSkin_Go");
+						previewGo.hideFlags = hideFlags;
 						previewGo.transform.position = new Vector3(999, 999, 1002);
 						preview = previewGo.AddComponent<GPUSkinningPlayerMono>();
-						preview.hideFlags = HideFlags.HideAndDontSave;
-						preview.Init(anim, mesh, mtrl, boneTexture);
+						preview.hideFlags = hideFlags;
+						preview.InitRes(anim, mesh, mtrl, boneTexture);
 						preview.Player.RootMotionEnabled = rootMotionEnabled;
 						preview.Player.LODEnabled = false;
 						preview.Player.CullingMode = GPUSKinningCullingMode.AlwaysAnimate;
@@ -834,10 +836,10 @@ public class GPUSkinningSamplerEditor : Editor
 						{
 							GUILayout.Label("Bounds");
 							boundsAutoExt = GUILayout.HorizontalSlider(boundsAutoExt, 0.0f, 1.0f);
-							if (GUILayout.Button("Calculate Auto", GUILayout.Width(100)))
-							{
-								CalculateBoundsAuto();
-							}
+							//if (GUILayout.Button("Calculate Auto", GUILayout.Width(100)))
+							//{
+							//	this.bounds = sampler.CalculateBoundsAuto(boundsAutoExt);
+							//}
 						}
 						EditorGUILayout.EndHorizontal();
 						EditorGUILayout.Space();
@@ -870,7 +872,6 @@ public class GPUSkinningSamplerEditor : Editor
 						if (GUILayout.Button("Apply"))
 						{
 							mesh.bounds = bounds;
-							anim.bounds = bounds;
 
 							if (anim.lodMeshes != null)
 							{
@@ -1316,29 +1317,6 @@ public class GPUSkinningSamplerEditor : Editor
 		}
 	}
 
-	private void CalculateBoundsAuto()
-	{
-		Matrix4x4[] matrices = anim.clips[0].frames[0].matrices;
-		Matrix4x4 rootMotionInv = anim.clips[0].rootMotionEnabled ? matrices[anim.rootBoneIndex].inverse : Matrix4x4.identity;
-		GPUSkinningBone[] bones = anim.bones;
-		Vector3 min = Vector3.one * 9999;
-		Vector3 max = min * -1;
-		for (int i = 0; i < bones.Length; ++i)
-		{
-			Vector4 pos = (rootMotionInv * matrices[i] * bones[i].bindpose.inverse) * new Vector4(0, 0, 0, 1);
-			min.x = Mathf.Min(min.x, pos.x);
-			min.y = Mathf.Min(min.y, pos.y);
-			min.z = Mathf.Min(min.z, pos.z);
-			max.x = Mathf.Max(max.x, pos.x);
-			max.y = Mathf.Max(max.y, pos.y);
-			max.z = Mathf.Max(max.z, pos.z);
-		}
-		min -= Vector3.one * boundsAutoExt;
-		max += Vector3.one * boundsAutoExt;
-		bounds.min = min;
-		bounds.max = max;
-	}
-
 	private void SortAnimEvents(GPUSkinningAnimation anim)
 	{
 		foreach (GPUSkinningClip clip in anim.clips)
@@ -1381,8 +1359,6 @@ public class GPUSkinningSamplerEditor : Editor
 			return;
 		}
 
-		GPUSkinningSampler sampler = target as GPUSkinningSampler;
-
 		if (EditorApplication.isCompiling)
 		{
 			if (Selection.activeGameObject == sampler.gameObject)
@@ -1416,6 +1392,7 @@ public class GPUSkinningSamplerEditor : Editor
 			else
 			{
 				sampler.EndSample();
+				sampler.SaveAsset();
 				EditorApplication.isPlaying = false;
 				EditorUtility.ClearProgressBar();
 				LockInspector(false);
@@ -1452,71 +1429,74 @@ public class GPUSkinningSamplerEditor : Editor
 
 	private void DestroyPreview()
 	{
-		if (rt != null)
+		if (rt == null) return;
+
+		cam.targetTexture = null;
+
+		DestroyImmediate(linearToGammeMtrl);
+		linearToGammeMtrl = null;
+
+		DestroyImmediate(rt);
+		rt = null;
+
+		if (rtGamma != null)
 		{
-			cam.targetTexture = null;
-
-			DestroyImmediate(linearToGammeMtrl);
-			linearToGammeMtrl = null;
-
-			DestroyImmediate(rt);
-			rt = null;
-
-			if (rtGamma != null)
-			{
-				DestroyImmediate(rtGamma);
-				rtGamma = null;
-			}
-
-			DestroyImmediate(cam.gameObject);
-			cam = null;
-
-			DestroyImmediate(preview.gameObject);
-			preview = null;
-
-			if (boundsGos != null)
-			{
-				foreach (GameObject boundsGo in boundsGos)
-				{
-					DestroyImmediate(boundsGo);
-				}
-				boundsGos = null;
-			}
-
-			if (arrowGos != null)
-			{
-				foreach (GameObject arrowGo in arrowGos)
-				{
-					DestroyImmediate(arrowGo);
-				}
-				arrowGos = null;
-
-				foreach (Material mtrl in arrowMtrls)
-				{
-					DestroyImmediate(mtrl);
-				}
-				arrowMtrls = null;
-			}
-
-			if (gridGos != null)
-			{
-				foreach (GameObject gridGo in gridGos)
-				{
-					DestroyImmediate(gridGo);
-				}
-				gridGos = null;
-
-				DestroyImmediate(gridMtrl);
-				gridMtrl = null;
-			}
-
-			DestroyImmediate(boundsMtrl);
-			boundsMtrl = null;
+			DestroyImmediate(rtGamma);
+			rtGamma = null;
 		}
+
+		DestroyImmediate(cam.gameObject);
+		cam = null;
+
+		DestroyImmediate(preview.gameObject);
+		preview = null;
+
+		if (boundsGos != null)
+		{
+			foreach (GameObject boundsGo in boundsGos)
+			{
+				DestroyImmediate(boundsGo);
+			}
+			boundsGos = null;
+		}
+
+		if (arrowGos != null)
+		{
+			foreach (GameObject arrowGo in arrowGos)
+			{
+				DestroyImmediate(arrowGo);
+			}
+			arrowGos = null;
+
+			foreach (Material mtrl in arrowMtrls)
+			{
+				DestroyImmediate(mtrl);
+			}
+			arrowMtrls = null;
+		}
+
+		if (gridGos != null)
+		{
+			foreach (GameObject gridGo in gridGos)
+			{
+				DestroyImmediate(gridGo);
+			}
+			gridGos = null;
+
+			DestroyImmediate(gridMtrl);
+			gridMtrl = null;
+		}
+
+		DestroyImmediate(boundsMtrl);
+		boundsMtrl = null;
+
+		Resources.UnloadUnusedAssets();
+		EditorUtility.UnloadUnusedAssetsImmediate();
 	}
 
 	private void Awake()
 	{
+		sampler = this.target as GPUSkinningSampler;
 		EditorApplication.update += UpdateHandler;
 		time = Time.realtimeSinceStartup;
 

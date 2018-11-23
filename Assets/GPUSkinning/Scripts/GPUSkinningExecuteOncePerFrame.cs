@@ -8,6 +8,7 @@ public class GPUSkinningExecuteOncePerFrame
 
     public bool CanBeExecute()
     {
+#if UNITY_EDITOR
         if (Application.isPlaying)
         {
             return frameCount != Time.frameCount;
@@ -16,13 +17,20 @@ public class GPUSkinningExecuteOncePerFrame
         {
             return true;
         }
+#else
+		return frameCount != Time.frameCount;
+#endif
     }
 
     public void MarkAsExecuted()
     {
+#if UNITY_EDITOR
         if (Application.isPlaying)
         {
             frameCount = Time.frameCount;
         }
+#else
+		frameCount = Time.frameCount;
+#endif
     }
 }

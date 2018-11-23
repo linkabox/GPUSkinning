@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GPUSKinning_Material_MutantAnim
-  m_Shader: {fileID: 4800000, guid: 70e5e22c7df66fb419116f5ac393ef4c, type: 3}
+  m_Shader: {fileID: 4800000, guid: 00777ae7d751b0549b0b6950fa9253c6, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0

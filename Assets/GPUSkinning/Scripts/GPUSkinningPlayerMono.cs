@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class GPUSkinningPlayerMono : MonoBehaviour
 {
 	[HideInInspector]
@@ -46,53 +46,55 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		}
 	}
 
-	public void Init(GPUSkinningAnimation anim, Mesh mesh, Material mtrl, Texture2D boneTexture)
+	public void InitRes(GPUSkinningAnimation anim = null, Mesh mesh = null, Material mtrl = null, Texture2D boneTexture = null)
 	{
 		if (player != null)
 		{
 			return;
 		}
 
-		this.anim = anim;
-		this.mesh = mesh;
-		this.mtrl = mtrl;
-		this.boneTexture = boneTexture;
-		Init();
+		if (anim != null)
+			this.anim = anim;
+		if (mesh != null)
+			this.mesh = mesh;
+		if (mtrl != null)
+			this.mtrl = mtrl;
+		if (boneTexture != null)
+			this.boneTexture = boneTexture;
+
+		var res = new GPUSkinningPlayerResources
+		{
+			anim = this.anim,
+			mesh = this.mesh,
+			boneTexture = this.boneTexture
+		};
+		res.InitMaterial(this.mtrl, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
+		Init(res);
 	}
 
-	public void Init()
+	public void Init(GPUSkinningPlayerResources res = null)
 	{
 		if (player != null)
 		{
 			return;
 		}
 
-		bool isPlaying = Application.isPlaying;
 		if (anim != null && mesh != null && mtrl != null && boneTexture != null)
 		{
-			GPUSkinningPlayerResources res = null;
-
-			if (isPlaying)
+			if (res == null)
 			{
 				GPUSkinningPlayerMgr.Instance.Register(anim, mesh, mtrl, boneTexture, this, out res);
 			}
-			else
-			{
-				res = new GPUSkinningPlayerResources();
-				res.anim = anim;
-				res.mesh = mesh;
-				res.InitMaterial(mtrl, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
-				res.boneTexture = boneTexture;
-			}
 
 			player = new GPUSkinningPlayer(gameObject, res);
-			player.RootMotionEnabled = isPlaying && rootMotionEnabled;
-			player.LODEnabled = isPlaying && lodEnabled;
+			player.RootMotionEnabled = rootMotionEnabled;
+			player.LODEnabled = lodEnabled;
 			player.CullingMode = cullingMode;
 
 			if (anim != null && anim.clips != null && anim.clips.Length > 0)
 			{
-				player.Play(anim.clips[Mathf.Clamp(defaultPlayingClipIndex, 0, anim.clips.Length)].name);
+				int defaultClip = Mathf.Clamp(defaultPlayingClipIndex, 0, anim.clips.Length);
+				player.Play(anim.clips[defaultClip].name);
 			}
 		}
 	}
@@ -100,6 +102,10 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 #if UNITY_EDITOR
 	public void DeletePlayer()
 	{
+		if (player != null)
+		{
+			player.Destroy();
+		}
 		player = null;
 	}
 
@@ -150,6 +156,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 
 	private void OnDestroy()
 	{
+#if UNITY_EDITOR
 		if (Application.isPlaying)
 		{
 			if (!GPUSkinningPlayerMgr.IsDestroy())
@@ -160,21 +167,19 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		else
 		{
 			//Editor Mode Manual Destroy
-			player.Res.Destroy();
+			DeletePlayer();
 		}
+#else
+		if (!GPUSkinningPlayerMgr.IsDestroy())
+		{
+			GPUSkinningPlayerMgr.Instance.Unregister(this);
+		}
+#endif
 
 		player = null;
 		anim = null;
 		mesh = null;
 		mtrl = null;
 		boneTexture = null;
-
-#if UNITY_EDITOR
-		if (!Application.isPlaying)
-		{
-			Resources.UnloadUnusedAssets();
-			UnityEditor.EditorUtility.UnloadUnusedAssetsImmediate();
-		}
-#endif
 	}
 }

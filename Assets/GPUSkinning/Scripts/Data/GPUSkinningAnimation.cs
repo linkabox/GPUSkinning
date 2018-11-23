@@ -15,8 +15,6 @@ public class GPUSkinningAnimation : ScriptableObject
 
     public GPUSkinningClip[] clips = null;
 
-    public Bounds bounds;
-
     public int textureWidth = 0;
 
     public int textureHeight = 0;
