@@ -6,16 +6,17 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 {
 	public bool showCullingBounds;
 
-	private readonly List<GPUSkinningPlayerResources> _refResList = new List<GPUSkinningPlayerResources>();
+	private List<GPUSkinningPlayerResources> refResList = new List<GPUSkinningPlayerResources>();
+	private List<GPUSkinningPlayerMono> allMonoPlayers = new List<GPUSkinningPlayerMono>();
 
 	public GPUSkinningPlayerResources FindRefRes(string guid)
 	{
-		int numItems = _refResList.Count;
+		int numItems = refResList.Count;
 		for (int i = 0; i < numItems; ++i)
 		{
-			if (_refResList[i].animData.guid == guid)
+			if (refResList[i].animData.guid == guid)
 			{
-				return _refResList[i];
+				return refResList[i];
 			}
 		}
 
@@ -35,7 +36,7 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 		if (res == null)
 		{
 			res = new GPUSkinningPlayerResources(animData, HideFlags.None);
-			_refResList.Add(res);
+			refResList.Add(res);
 		}
 
 		if (!res.players.Contains(player))
@@ -43,54 +44,65 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 			res.AddPlayer(player);
 		}
 
+		allMonoPlayers.Add(player);
+
 		result = res;
 	}
 
 	public void Unregister(GPUSkinningPlayerMono player)
 	{
-		if (player == null)
-		{
-			return;
-		}
+		if (player == null) return;
 
-		int count = _refResList.Count;
+		int count = refResList.Count;
 		for (int i = 0; i < count; ++i)
 		{
-			int playerIndex = _refResList[i].players.IndexOf(player);
+			int playerIndex = refResList[i].players.IndexOf(player);
 			if (playerIndex != -1)
 			{
-				_refResList[i].players.RemoveAt(playerIndex);
-				_refResList[i].RemoveCullingBounds(playerIndex);
-				if (_refResList[i].players.Count == 0)
+				refResList[i].players.RemoveAt(playerIndex);
+				refResList[i].RemoveCullingBounds(playerIndex);
+				if (refResList[i].players.Count == 0)
 				{
-					_refResList[i].Destroy();
-					_refResList.RemoveAt(i);
+					refResList[i].Destroy();
+					refResList.RemoveAt(i);
 				}
 				break;
 			}
+		}
+
+		allMonoPlayers.Remove(player);
+	}
+
+	void Update()
+	{
+		float deltaTime = Time.deltaTime;
+		foreach (var monoPlayer in allMonoPlayers)
+		{
+			monoPlayer.ManualUpdate(deltaTime);
 		}
 	}
 
 	public override void OnDispose()
 	{
-		Debug.Log("GPUSkinningPlayerMgr OnDispose:" + _refResList.Count);
+		Debug.Log("GPUSkinningPlayerMgr OnDispose:" + refResList.Count);
 
-		foreach (var res in _refResList)
+		foreach (var res in refResList)
 		{
 			res.Destroy();
 		}
-		_refResList.Clear();
+		refResList.Clear();
+		allMonoPlayers.Clear();
 	}
 
 	void OnDrawGizmos()
 	{
 		if (showCullingBounds)
 		{
-			if (_refResList != null)
+			if (refResList != null)
 			{
-				for (var index = 0; index < _refResList.Count; index++)
+				for (var index = 0; index < refResList.Count; index++)
 				{
-					var res = _refResList[index];
+					var res = refResList[index];
 					if (res.players != null)
 					{
 						int count = res.players.Count;

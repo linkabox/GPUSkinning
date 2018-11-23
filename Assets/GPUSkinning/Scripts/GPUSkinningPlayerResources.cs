@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class GPUSkinningPlayerResources
 {
 	private static readonly int shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");

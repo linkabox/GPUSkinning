@@ -554,7 +554,7 @@ public class GPUSkinningSamplerEditor : Editor
 	private void OnGUI_AnimTimeline_PlayerUpdate()
 	{
 		preview.Player.Resume();
-		preview.Player.Update_Editor(0);
+		preview.Player.Update(0);
 		preview.Player.Stop();
 	}
 
@@ -1373,7 +1373,7 @@ public class GPUSkinningSamplerEditor : Editor
 			PreviewDrawArrows();
 			PreviewDrawGrid();
 
-			preview.Update_Editor(deltaTime);
+			preview.ManualUpdate(deltaTime);
 			PreviewInteraction_CameraRestriction();
 			cam.Render();
 		}

@@ -110,20 +110,14 @@ public class GPUSkinningPlayerMonoEditor : Editor
 
 	private void UpdateHandler()
 	{
+		if (Application.isPlaying) return;
+
 		float deltaTime = Time.realtimeSinceStartup - time;
 		time = Time.realtimeSinceStartup;
 
 		if (_player != null)
 		{
-			_player.Update_Editor(deltaTime);
-		}
-
-		foreach (var sceneView in SceneView.sceneViews)
-		{
-			if (sceneView is SceneView)
-			{
-				(sceneView as SceneView).Repaint();
-			}
+			_player.ManualUpdate(deltaTime);
 		}
 	}
 }

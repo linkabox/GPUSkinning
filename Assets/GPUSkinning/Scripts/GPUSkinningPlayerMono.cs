@@ -90,49 +90,26 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		}
 		player = null;
 	}
-
-	public void Update_Editor(float deltaTime)
-	{
-		if (player != null && !Application.isPlaying)
-		{
-			player.Update_Editor(deltaTime);
-		}
-	}
-
-	//private void OnValidate()
-	//{
-	//	if (!Application.isPlaying)
-	//	{
-	//		Init();
-	//		Update_Editor(0);
-	//	}
-	//}
 #endif
 
 	private void Awake()
 	{
 		Init();
 #if UNITY_EDITOR
-		Update_Editor(0);
+		ManualUpdate(0);
 #endif
 	}
 
-	private void Update()
+	//private void Update()
+	//{
+	//	UpdatePlayer(Time.deltaTime);
+	//}
+
+	public void ManualUpdate(float deltaTime)
 	{
 		if (player != null)
 		{
-#if UNITY_EDITOR
-			if (Application.isPlaying)
-			{
-				player.Update(Time.deltaTime);
-			}
-			else
-			{
-				player.Update_Editor(0);
-			}
-#else
-            player.Update(Time.deltaTime);
-#endif
+			player.Update(Time.deltaTime);
 		}
 	}
 

@@ -34,7 +34,7 @@ public class GPUSkinningPlayer
 
 	private GPUSkinningPlayerResources _res = null;
 
-	public GPUSkinningPlayerResources Res
+	public GPUSkinningPlayerResources RefRes
 	{
 		get { return _res; }
 	}
@@ -307,13 +307,6 @@ public class GPUSkinningPlayer
 			mf.sharedMesh = mesh;
 		}
 	}
-
-#if UNITY_EDITOR
-	public void Update_Editor(float timeDelta)
-	{
-		Update_Internal(timeDelta);
-	}
-#endif
 
 	public void Update(float timeDelta)
 	{
