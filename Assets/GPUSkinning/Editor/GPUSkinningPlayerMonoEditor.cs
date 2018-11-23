@@ -14,9 +14,11 @@ public class GPUSkinningPlayerMonoEditor : Editor
 	private SerializedProperty lodProp;
 	private SerializedProperty cullingProp;
 	private SerializedProperty defaultClipProp;
+	private SerializedProperty radiusProp;
 
 	private static readonly GUIContent LodDesc = new GUIContent("LOD Enabled");
 	private static readonly GUIContent CullingModeDesc = new GUIContent("Culling Mode");
+	private static readonly GUIContent RadiusDesc = new GUIContent("Culling Radius");
 
 	public override void OnInspectorGUI()
 	{
@@ -78,6 +80,8 @@ public class GPUSkinningPlayerMonoEditor : Editor
 			}
 		}
 
+		EditorGUILayout.PropertyField(radiusProp, RadiusDesc);
+
 		serializedObject.ApplyModifiedProperties();
 	}
 
@@ -93,6 +97,7 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		lodProp = serializedObject.FindProperty("lodEnabled");
 		cullingProp = serializedObject.FindProperty("cullingMode");
 		defaultClipProp = serializedObject.FindProperty("defaultPlayingClipIndex");
+		radiusProp = serializedObject.FindProperty("sphereRadius");
 
 		time = Time.realtimeSinceStartup;
 		EditorApplication.update += UpdateHandler;

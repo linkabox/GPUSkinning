@@ -25,6 +25,8 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 	[SerializeField]
 	private GPUSKinningCullingMode cullingMode = GPUSKinningCullingMode.CullUpdateTransforms;
 
+	public float sphereRadius = 1f;
+
 	private GPUSkinningPlayer player = null;
 	public GPUSkinningPlayer Player
 	{
@@ -46,11 +48,8 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 
 		if (this.animData != null)
 		{
-			var res = new GPUSkinningPlayerResources
-			{
-				animData = this.animData,
-			};
-			res.InitMaterial(this.animData.material, HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
+			var res = new GPUSkinningPlayerResources(this.animData,
+				HideFlags.DontSaveInBuild | HideFlags.DontSaveInEditor);
 			Init(res);
 		}
 	}

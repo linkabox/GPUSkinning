@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 {
-	private readonly List<GPUSkinningPlayerResources> _playerResList = new List<GPUSkinningPlayerResources>();
+	public bool showCullingBounds;
+
+	private readonly List<GPUSkinningPlayerResources> _refResList = new List<GPUSkinningPlayerResources>();
+
+	public GPUSkinningPlayerResources FindRefRes(string guid)
+	{
+		int numItems = _refResList.Count;
+		for (int i = 0; i < numItems; ++i)
+		{
+			if (_refResList[i].animData.guid == guid)
+			{
+				return _refResList[i];
+			}
+		}
+
+		return null;
+	}
 
 	public void Register(GPUSkinningAnimation animData, GPUSkinningPlayerMono player, out GPUSkinningPlayerResources result)
 	{
@@ -15,35 +31,16 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 			return;
 		}
 
-		GPUSkinningPlayerResources res = null;
-
-		int numItems = _playerResList.Count;
-		for (int i = 0; i < numItems; ++i)
-		{
-			if (_playerResList[i].animData.guid == animData.guid)
-			{
-				res = _playerResList[i];
-				break;
-			}
-		}
-
+		GPUSkinningPlayerResources res = FindRefRes(animData.guid);
 		if (res == null)
 		{
-			res = new GPUSkinningPlayerResources();
-			_playerResList.Add(res);
+			res = new GPUSkinningPlayerResources(animData, HideFlags.None);
+			_refResList.Add(res);
 		}
-
-		if (res.animData == null)
-		{
-			res.animData = animData;
-		}
-
-		res.InitMaterial(animData.material, HideFlags.None);
 
 		if (!res.players.Contains(player))
 		{
-			res.players.Add(player);
-			res.AddCullingBounds();
+			res.AddPlayer(player);
 		}
 
 		result = res;
@@ -56,18 +53,18 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 			return;
 		}
 
-		int numItems = _playerResList.Count;
-		for (int i = 0; i < numItems; ++i)
+		int count = _refResList.Count;
+		for (int i = 0; i < count; ++i)
 		{
-			int playerIndex = _playerResList[i].players.IndexOf(player);
+			int playerIndex = _refResList[i].players.IndexOf(player);
 			if (playerIndex != -1)
 			{
-				_playerResList[i].players.RemoveAt(playerIndex);
-				_playerResList[i].RemoveCullingBounds(playerIndex);
-				if (_playerResList[i].players.Count == 0)
+				_refResList[i].players.RemoveAt(playerIndex);
+				_refResList[i].RemoveCullingBounds(playerIndex);
+				if (_refResList[i].players.Count == 0)
 				{
-					_playerResList[i].Destroy();
-					_playerResList.RemoveAt(i);
+					_refResList[i].Destroy();
+					_refResList.RemoveAt(i);
 				}
 				break;
 			}
@@ -76,12 +73,37 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 
 	public override void OnDispose()
 	{
-		Debug.Log("GPUSkinningPlayerMgr OnDispose:" + _playerResList.Count);
+		Debug.Log("GPUSkinningPlayerMgr OnDispose:" + _refResList.Count);
 
-		foreach (var res in _playerResList)
+		foreach (var res in _refResList)
 		{
 			res.Destroy();
 		}
-		_playerResList.Clear();
+		_refResList.Clear();
+	}
+
+	void OnDrawGizmos()
+	{
+		if (showCullingBounds)
+		{
+			if (_refResList != null)
+			{
+				for (var index = 0; index < _refResList.Count; index++)
+				{
+					var res = _refResList[index];
+					if (res.players != null)
+					{
+						int count = res.players.Count;
+						for (int i = 0; i < count; i++)
+						{
+							var bSphere = res.GetCullingBounds(i);
+							Gizmos.color = Color.red;
+							Gizmos.DrawWireSphere(bSphere.position, bSphere.radius);
+						}
+					}
+				}
+			}
+
+		}
 	}
 }

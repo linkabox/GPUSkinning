@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class GPUSkinningPlayerResources
 {
+	private static readonly int shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");
+
+	private static readonly int shaderPropID_BoneTextureParams = Shader.PropertyToID("_boneTextureParams");
+
+	private static readonly int shaderPorpID_FrameInfo = Shader.PropertyToID("_frameInfo");
+
+	private static readonly int shaderPorpID_BlendInfo = Shader.PropertyToID("_blendInfo");
+
+	//private static int shaderPropID_RootMotion = Shader.PropertyToID("_rootMotion");
+	//private static int shaderPropID_Blend_RootMotion = Shader.PropertyToID("_blendRootMotion");
+
 	public enum MaterialState
 	{
 		BlendOff,
@@ -25,6 +36,8 @@ public class GPUSkinningPlayerResources
 
 	private readonly GPUSkinningExecuteOncePerFrame _executeOncePerFrame = new GPUSkinningExecuteOncePerFrame();
 
+	private bool _dispose;
+
 	private float time = 0;
 	public float Time
 	{
@@ -38,19 +51,22 @@ public class GPUSkinningPlayerResources
 		}
 	}
 
-	private static readonly int shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");
+	public GPUSkinningPlayerResources(GPUSkinningAnimation animData, HideFlags matHideFlags)
+	{
+		this.animData = animData;
+		InitMaterial(animData.material, matHideFlags);
+	}
 
-	private static readonly int shaderPropID_BoneTextureParams = Shader.PropertyToID("_boneTextureParams");
-
-	private static readonly int shaderPorpID_FrameInfo = Shader.PropertyToID("_frameInfo");
-
-	private static readonly int shaderPorpID_BlendInfo = Shader.PropertyToID("_blendInfo");
-
-	//private static int shaderPropID_RootMotion = Shader.PropertyToID("_rootMotion");
-	//private static int shaderPropID_Blend_RootMotion = Shader.PropertyToID("_blendRootMotion");
+	public void AddPlayer(GPUSkinningPlayerMono player)
+	{
+		players.Add(player);
+		AddCullingBounds();
+	}
 
 	public void Destroy()
 	{
+		if (_dispose) return;
+
 		animData = null;
 
 		if (_cullingBounds != null)
@@ -76,6 +92,18 @@ public class GPUSkinningPlayerResources
 			players.Clear();
 			players = null;
 		}
+
+		_dispose = true;
+	}
+
+	public BoundingSphere GetCullingBounds(int index)
+	{
+		if (players != null && _cullingBounds != null && index < players.Count)
+		{
+			return _cullingBounds[index];
+		}
+
+		return new BoundingSphere();
 	}
 
 	public void AddCullingBounds()
@@ -169,7 +197,7 @@ public class GPUSkinningPlayerResources
 			GPUSkinningPlayerMono player = players[i];
 			BoundingSphere bounds = _cullingBounds[i];
 			bounds.position = player.Player.Position;
-			bounds.radius = 1f;
+			bounds.radius = player.sphereRadius;
 			_cullingBounds[i] = bounds;
 		}
 	}

@@ -72,16 +72,16 @@ public class GPUSkinningPlayer
 		}
 	}
 
-	private bool visible = false;
+	private bool _visible = false;
 	public bool Visible
 	{
 		get
 		{
-			return Application.isPlaying ? visible : true;
+			return _visible;
 		}
 		set
 		{
-			visible = value;
+			_visible = value;
 		}
 	}
 
