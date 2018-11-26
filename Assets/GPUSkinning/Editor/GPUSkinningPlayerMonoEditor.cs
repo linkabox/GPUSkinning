@@ -8,6 +8,7 @@ public class GPUSkinningPlayerMonoEditor : Editor
 {
 	private GPUSkinningPlayerMono _player;
 	private float time = 0;
+	private float fps = 30f;
 	private string[] clipsName = null;
 
 	private SerializedProperty animDataProp;
@@ -26,6 +27,8 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		{
 			return;
 		}
+
+		fps = EditorGUILayout.FloatField("Editor FPS:", fps);
 
 		EditorGUI.BeginChangeCheck();
 		EditorGUILayout.PropertyField(animDataProp);
@@ -100,19 +103,25 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		radiusProp = serializedObject.FindProperty("sphereRadius");
 
 		time = Time.realtimeSinceStartup;
-		EditorApplication.update += UpdateHandler;
+		//EditorApplication.update += UpdateHandler;
 	}
 
 	private void OnDisable()
 	{
-		EditorApplication.update -= UpdateHandler;
+		//EditorApplication.update -= UpdateHandler;
 	}
 
-	private void UpdateHandler()
+	private void OnSceneGUI()
 	{
 		if (Application.isPlaying) return;
 
+		SceneView.RepaintAll();
+
 		float deltaTime = Time.realtimeSinceStartup - time;
+		if (deltaTime < 1 / fps)
+		{
+			return;
+		}
 		time = Time.realtimeSinceStartup;
 
 		if (_player != null)
