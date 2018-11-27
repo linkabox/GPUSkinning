@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+#if UNITY_EDITOR
+[System.Serializable]
+#endif
 public class GPUSkinningPlayer
 {
 	public delegate void OnAnimEvent(GPUSkinningPlayer player, int eventId);
@@ -190,11 +193,11 @@ public class GPUSkinningPlayer
 				{
 					if (playingClip.individualDifferenceEnabled)
 					{
-						_res.Time = playingClip.length + v * playingClip.length - this.timeDiff;
+						this.time = playingClip.length + v * playingClip.length - this.timeDiff;
 					}
 					else
 					{
-						_res.Time = v * playingClip.length;
+						this.time = v * playingClip.length;
 					}
 				}
 				else
@@ -352,8 +355,13 @@ public class GPUSkinningPlayer
 			mr.sharedMaterial = currMtrl.material;
 		}
 
+		time += timeDelta;
 		if (playingClip.wrapMode == GPUSkinningWrapMode.Loop)
 		{
+			if (time >= playingClip.length)
+			{
+				time = 0;
+			}
 			UpdateMaterial(timeDelta, currMtrl);
 		}
 		else if (playingClip.wrapMode == GPUSkinningWrapMode.Once)
@@ -361,21 +369,8 @@ public class GPUSkinningPlayer
 			if (time >= playingClip.length)
 			{
 				time = playingClip.length;
-				UpdateMaterial(timeDelta, currMtrl);
 			}
-			else
-			{
-				UpdateMaterial(timeDelta, currMtrl);
-				time += timeDelta;
-				if (time > playingClip.length)
-				{
-					time = playingClip.length;
-				}
-			}
-		}
-		else
-		{
-			throw new System.NotImplementedException();
+			UpdateMaterial(timeDelta, currMtrl);
 		}
 
 		crossFadeProgress += timeDelta;
@@ -501,7 +496,7 @@ public class GPUSkinningPlayer
 		}
 		else if (WrapMode == GPUSkinningWrapMode.Loop)
 		{
-			time = _res.Time + (playingClip.individualDifferenceEnabled ? this.timeDiff : 0);
+			time = this.time + (playingClip.individualDifferenceEnabled ? this.timeDiff : 0);
 		}
 		else
 		{
@@ -513,7 +508,7 @@ public class GPUSkinningPlayer
 	private int GetFrameIndex()
 	{
 		float time = GetCurrentTime();
-		if (playingClip.length == time)
+		if (Mathf.Abs(playingClip.length - time) < 0.01f)
 		{
 			return GetTheLastFrameIndex_WrapMode_Once(playingClip);
 		}

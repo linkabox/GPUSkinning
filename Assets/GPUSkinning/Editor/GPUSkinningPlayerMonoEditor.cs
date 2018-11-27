@@ -15,14 +15,14 @@ public class GPUSkinningPlayerMonoEditor : Editor
 	private SerializedProperty lodProp;
 	private SerializedProperty cullingProp;
 	private SerializedProperty defaultClipProp;
-	private SerializedProperty radiusProp;
 
 	private static readonly GUIContent LodDesc = new GUIContent("LOD Enabled");
 	private static readonly GUIContent CullingModeDesc = new GUIContent("Culling Mode");
-	private static readonly GUIContent RadiusDesc = new GUIContent("Culling Radius");
 
 	public override void OnInspectorGUI()
 	{
+		base.DrawDefaultInspector();
+
 		if (_player == null)
 		{
 			return;
@@ -82,9 +82,6 @@ public class GPUSkinningPlayerMonoEditor : Editor
 				_player.Player.Play(clipsName[defaultClipProp.intValue]);
 			}
 		}
-
-		EditorGUILayout.PropertyField(radiusProp, RadiusDesc);
-
 		serializedObject.ApplyModifiedProperties();
 	}
 
@@ -100,7 +97,6 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		lodProp = serializedObject.FindProperty("lodEnabled");
 		cullingProp = serializedObject.FindProperty("cullingMode");
 		defaultClipProp = serializedObject.FindProperty("defaultPlayingClipIndex");
-		radiusProp = serializedObject.FindProperty("sphereRadius");
 
 		time = Time.realtimeSinceStartup;
 		//EditorApplication.update += UpdateHandler;
@@ -115,10 +111,9 @@ public class GPUSkinningPlayerMonoEditor : Editor
 	{
 		if (Application.isPlaying) return;
 
-		SceneView.RepaintAll();
-
 		float deltaTime = Time.realtimeSinceStartup - time;
-		if (deltaTime < 1 / fps)
+		float dt = 1 / fps;
+		if (deltaTime < dt)
 		{
 			return;
 		}
@@ -126,7 +121,9 @@ public class GPUSkinningPlayerMonoEditor : Editor
 
 		if (_player != null)
 		{
-			_player.ManualUpdate(deltaTime);
+			_player.ManualUpdate(dt);
 		}
+
+		SceneView.RepaintAll();
 	}
 }

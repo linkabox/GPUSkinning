@@ -5,6 +5,9 @@ using UnityEngine;
 //[ExecuteInEditMode]
 public class GPUSkinningPlayerMono : MonoBehaviour
 {
+	public float timeScale = 1f;
+	public float cullingRadius = 1f;
+
 	[HideInInspector]
 	[SerializeField]
 	private GPUSkinningAnimation animData = null;
@@ -24,8 +27,6 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 	[HideInInspector]
 	[SerializeField]
 	private GPUSKinningCullingMode cullingMode = GPUSKinningCullingMode.CullUpdateTransforms;
-
-	public float sphereRadius = 1f;
 
 	private GPUSkinningPlayer player = null;
 	public GPUSkinningPlayer Player
@@ -95,9 +96,6 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 	private void Awake()
 	{
 		Init();
-#if UNITY_EDITOR
-		ManualUpdate(0);
-#endif
 	}
 
 	//private void Update()
@@ -109,7 +107,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 	{
 		if (player != null)
 		{
-			player.Update(Time.deltaTime);
+			player.Update(Time.deltaTime * timeScale);
 		}
 	}
 

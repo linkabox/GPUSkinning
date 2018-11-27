@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [System.Serializable]
+#endif
 public class GPUSkinningPlayerResources
 {
 	private static readonly int shaderPropID_BoneTexture = Shader.PropertyToID("_boneTexture");
@@ -39,18 +41,18 @@ public class GPUSkinningPlayerResources
 
 	private bool _dispose;
 
-	private float time = 0;
-	public float Time
-	{
-		get
-		{
-			return time;
-		}
-		set
-		{
-			time = value;
-		}
-	}
+	//private float time = 0;
+	//public float Time
+	//{
+	//	get
+	//	{
+	//		return time;
+	//	}
+	//	set
+	//	{
+	//		time = value;
+	//	}
+	//}
 
 	public GPUSkinningPlayerResources(GPUSkinningAnimation animData, HideFlags matHideFlags)
 	{
@@ -198,7 +200,7 @@ public class GPUSkinningPlayerResources
 			GPUSkinningPlayerMono player = players[i];
 			BoundingSphere bounds = _cullingBounds[i];
 			bounds.position = player.Player.Position;
-			bounds.radius = player.sphereRadius;
+			bounds.radius = player.cullingRadius;
 			_cullingBounds[i] = bounds;
 		}
 	}
@@ -208,7 +210,6 @@ public class GPUSkinningPlayerResources
 		if (_executeOncePerFrame.CanBeExecute())
 		{
 			_executeOncePerFrame.MarkAsExecuted();
-			time += deltaTime;
 			UpdateCullingBounds();
 		}
 
