@@ -7,8 +7,6 @@ using UnityEditor;
 public class GPUSkinningPlayerMonoEditor : Editor
 {
 	private GPUSkinningPlayerMono _player;
-	private float time = 0;
-	private float fps = 30f;
 	private string[] clipsName = null;
 
 	private SerializedProperty animDataProp;
@@ -28,15 +26,11 @@ public class GPUSkinningPlayerMonoEditor : Editor
 			return;
 		}
 
-		fps = EditorGUILayout.FloatField("Editor FPS:", fps);
-
 		EditorGUI.BeginChangeCheck();
 		EditorGUILayout.PropertyField(animDataProp);
 		if (EditorGUI.EndChangeCheck())
 		{
 			serializedObject.ApplyModifiedProperties();
-			_player.DeletePlayer();
-			_player.InitRes();
 		}
 
 		EditorGUI.BeginChangeCheck();
@@ -79,7 +73,10 @@ public class GPUSkinningPlayerMonoEditor : Editor
 			defaultClipProp.intValue = EditorGUILayout.Popup("Default Playing", defaultClipProp.intValue, clipsName);
 			if (EditorGUI.EndChangeCheck())
 			{
-				_player.Player.Play(clipsName[defaultClipProp.intValue]);
+				if (Application.isPlaying)
+				{
+					_player.Player.Play(clipsName[defaultClipProp.intValue]);
+				}
 			}
 		}
 		serializedObject.ApplyModifiedProperties();
@@ -88,42 +85,14 @@ public class GPUSkinningPlayerMonoEditor : Editor
 	private void OnEnable()
 	{
 		_player = target as GPUSkinningPlayerMono;
-		if (_player != null)
-		{
-			_player.InitRes();
-		}
-
 		animDataProp = serializedObject.FindProperty("animData");
 		lodProp = serializedObject.FindProperty("lodEnabled");
 		cullingProp = serializedObject.FindProperty("cullingMode");
 		defaultClipProp = serializedObject.FindProperty("defaultPlayingClipIndex");
-
-		time = Time.realtimeSinceStartup;
-		//EditorApplication.update += UpdateHandler;
 	}
 
 	private void OnDisable()
 	{
-		//EditorApplication.update -= UpdateHandler;
-	}
 
-	private void OnSceneGUI()
-	{
-		if (Application.isPlaying) return;
-
-		float deltaTime = Time.realtimeSinceStartup - time;
-		float dt = 1 / fps;
-		if (deltaTime < dt)
-		{
-			return;
-		}
-		time = Time.realtimeSinceStartup;
-
-		if (_player != null)
-		{
-			_player.ManualUpdate(dt);
-		}
-
-		SceneView.RepaintAll();
 	}
 }
