@@ -300,10 +300,17 @@ public class GPUSkinningSampler : MonoBehaviour
 		if (!_initAnimData)
 		{
 			//First create animData
-			if (anim == null && _tmpAnimData == null)
+			if (anim != null)
 			{
-				_tmpAnimData = ScriptableObject.CreateInstance<GPUSkinningAnimation>();
-				_tmpAnimData.guid = System.Guid.NewGuid().ToString();
+				_tmpAnimData = anim;
+			}
+			else
+			{
+				if (_tmpAnimData == null)
+				{
+					_tmpAnimData = ScriptableObject.CreateInstance<GPUSkinningAnimation>();
+					_tmpAnimData.guid = System.Guid.NewGuid().ToString();
+				}
 			}
 			_tmpAnimData.assetName = assetName;
 
