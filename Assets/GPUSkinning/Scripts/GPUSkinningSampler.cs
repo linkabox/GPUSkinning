@@ -117,8 +117,11 @@ public class GPUSkinningSampler : MonoBehaviour
 	public const string TEMP_SAVED_SHADER_PATH = "GPUSkinning_Temp_Save_Shader_Path";
 	public const string TEMP_SAVED_TEXTURE_PATH = "GPUSkinning_Temp_Save_Texture_Path";
 
+	private bool _initAnimData;
+
 	public void BeginSample()
 	{
+		_initAnimData = false;
 		samplingClipIndex = 0;
 	}
 
@@ -294,29 +297,38 @@ public class GPUSkinningSampler : MonoBehaviour
 
 		samplingFrameIndex = 0;
 
-		_tmpAnimData = anim == null ? ScriptableObject.CreateInstance<GPUSkinningAnimation>() : anim;
-		_tmpAnimData.assetName = assetName;
-
-		if (anim == null)
+		if (!_initAnimData)
 		{
-			_tmpAnimData.guid = System.Guid.NewGuid().ToString();
-		}
+			//First create animData
+			if (anim == null && _tmpAnimData == null)
+			{
+				_tmpAnimData = ScriptableObject.CreateInstance<GPUSkinningAnimation>();
+				_tmpAnimData.guid = System.Guid.NewGuid().ToString();
+			}
+			_tmpAnimData.assetName = assetName;
 
-		List<GPUSkinningBone> bones_result = new List<GPUSkinningBone>();
-		CollectBones(bones_result, smr.bones, mesh.bindposes, null, rootBoneTransform, 0);
-		GPUSkinningBone[] newBones = bones_result.ToArray();
-		GenerateBonesGUID(newBones);
-		if (anim != null) RestoreCustomBoneData(anim.bones, newBones);
-		_tmpAnimData.bones = newBones;
-		_tmpAnimData.rootBoneIndex = 0;
-		_tmpAnimData.exposeCount = GetExposeBonesCount(newBones);
-		_tmpAnimData.skinQuality = skinQuality;
+			List<GPUSkinningBone> bonesResult = new List<GPUSkinningBone>();
+			CollectBones(bonesResult, smr.bones, mesh.bindposes, null, rootBoneTransform, 0);
+			GPUSkinningBone[] newBones = bonesResult.ToArray();
+			GenerateBonesGUID(newBones);
+			if (anim != null && anim.bones != null)
+			{
+				RestoreCustomBoneData(anim.bones, newBones);
+			}
+
+			_tmpAnimData.bones = newBones;
+			_tmpAnimData.rootBoneIndex = 0;
+			_tmpAnimData.exposeCount = GetExposeBonesCount(newBones);
+			_tmpAnimData.skinQuality = skinQuality;
+
+			_initAnimData = true;
+		}
 
 		int numClips = _tmpAnimData.clips == null ? 0 : _tmpAnimData.clips.Length;
 		int overrideClipIndex = -1;
 		for (int i = 0; i < numClips; ++i)
 		{
-			if (_tmpAnimData.clips[i].name == animClip.name)
+			if (_tmpAnimData.clips != null && _tmpAnimData.clips[i].name == animClip.name)
 			{
 				overrideClipIndex = i;
 				break;
