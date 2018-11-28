@@ -55,18 +55,6 @@ public class GPUSkinningPlayerMonoEditor : Editor
 			}
 		}
 
-		GPUSkinningAnimation animData = animDataProp.objectReferenceValue as GPUSkinningAnimation;
-		if (clipsName == null && animData != null)
-		{
-			List<string> list = new List<string>();
-			for (int i = 0; i < animData.clips.Length; ++i)
-			{
-				list.Add(animData.clips[i].name);
-			}
-			clipsName = list.ToArray();
-
-			defaultClipProp.intValue = Mathf.Clamp(defaultClipProp.intValue, 0, animData.clips.Length);
-		}
 		if (clipsName != null)
 		{
 			EditorGUI.BeginChangeCheck();
@@ -75,11 +63,27 @@ public class GPUSkinningPlayerMonoEditor : Editor
 			{
 				if (Application.isPlaying)
 				{
-					_player.Player.Play(clipsName[defaultClipProp.intValue]);
+					_player.Player.Play(defaultClipProp.intValue);
 				}
 			}
 		}
 		serializedObject.ApplyModifiedProperties();
+
+		if (Application.isPlaying)
+		{
+			EditorGUILayout.BeginVertical("HelpBox");
+			EditorGUILayout.PrefixLabel("All Clips:");
+			for (var i = 0; i < _player.Player.RefRes.animData.clips.Length; i++)
+			{
+				var clip = _player.Player.RefRes.animData.clips[i];
+				if (GUILayout.Button(clip.name))
+				{
+					_player.Player.CrossFade(i, 0.2f);
+				}
+			}
+
+			EditorGUILayout.EndVertical();
+		}
 	}
 
 	private void OnEnable()
@@ -89,6 +93,24 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		lodProp = serializedObject.FindProperty("lodEnabled");
 		cullingProp = serializedObject.FindProperty("cullingMode");
 		defaultClipProp = serializedObject.FindProperty("defaultPlayingClipIndex");
+
+		GPUSkinningAnimation animData = animDataProp.objectReferenceValue as GPUSkinningAnimation;
+		if (animData != null && animData.clips != null)
+		{
+			var clips = new string[animData.clips.Length];
+			for (int i = 0; i < animData.clips.Length; ++i)
+			{
+				clips[i] = animData.clips[i].name;
+			}
+			this.clipsName = clips;
+
+			defaultClipProp.intValue = Mathf.Clamp(defaultClipProp.intValue, 0, animData.clips.Length);
+		}
+		else
+		{
+			this.clipsName = null;
+			defaultClipProp.intValue = 0;
+		}
 	}
 
 	private void OnDisable()
