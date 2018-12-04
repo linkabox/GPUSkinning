@@ -78,4 +78,49 @@ inline float4 skinning(float4 vertex, float4 boneIndex, float4 boneWeight)
 #endif
 }
 
+inline float3 skin_blend_normal(float3 pos0, float3 pos1, float crossFadeBlend)
+{
+	return float3(pos1 + (pos0 - pos1) * crossFadeBlend);
+}
+
+inline float3 skinToPos_normal(float3 normal, float4 boneIndex, float4 boneWeight, float frameIndex, float segment)
+{
+	float frameStartIndex = segment + frameIndex * _boneTextureParams.z;
+	half4x4 mat0 = getMatrix(frameStartIndex, boneIndex.x);
+#if BONE_2 || BONE_4
+	half4x4 mat1 = getMatrix(frameStartIndex, boneIndex.y);
+#endif
+
+#if BONE_4
+	half4x4 mat2 = getMatrix(frameStartIndex, boneIndex.z);
+	half4x4 mat3 = getMatrix(frameStartIndex, boneIndex.w);
+#endif
+
+	float3 pos = mul(mat0, normal) * boneWeight.x;
+#if BONE_2 || BONE_4
+	pos = pos + mul(mat1, normal) * boneWeight.y;
+#endif
+
+#if BONE_4
+	pos = pos + mul(mat2, normal) * boneWeight.z;
+	pos = pos + mul(mat3, normal) * boneWeight.w;
+#endif
+	return pos;
+}
+
+inline float3 skinning_normal(float3 normal, float4 boneIndex, float4 boneWeight)
+{
+	float2 frameInfo = UNITY_ACCESS_INSTANCED_PROP(_frameInfo_arr, _frameInfo);
+	float3 pos0 = skinToPos_normal(normal, boneIndex, boneWeight, frameInfo.x, frameInfo.y);
+
+#if BLEND_ON
+	float3 blendInfo = UNITY_ACCESS_INSTANCED_PROP(_blendInfo_arr, _blendInfo);
+	float3 pos1 = skinToPos_normal(normal, boneIndex, boneWeight, blendInfo.x, blendInfo.y);
+
+	return skin_blend_normal(pos0, pos1, blendInfo.z);
+#else
+	return pos0;
+#endif
+}
+
 #endif

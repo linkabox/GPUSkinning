@@ -136,4 +136,11 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		player = null;
 		animData = null;
 	}
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.red;
+		var bounds = animData.defaultMesh.bounds;
+		Gizmos.DrawWireCube(this.transform.position + bounds.center, bounds.size);
+	}
 }
