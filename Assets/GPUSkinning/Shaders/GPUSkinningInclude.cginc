@@ -5,15 +5,19 @@
 uniform sampler2D _boneTexture;
 uniform float3 _boneTextureParams; //x-textureWidth, y-textureHeight, z- bonePixelCount
 
-UNITY_INSTANCING_BUFFER_START(Props)
-UNITY_DEFINE_INSTANCED_PROP(float2, _frameInfo) //x-frameIndex, y-pixelSegment
+#if (SHADER_TARGET < 30 || SHADER_API_GLES)
+	uniform float2 _frameInfo;
+	uniform float3 _blendInfo;
+#else
+	UNITY_INSTANCING_BUFFER_START(Props)
+		UNITY_DEFINE_INSTANCED_PROP(float2, _frameInfo) //x-frameIndex, y-pixelSegment
 #define _frameInfo_arr Props
-
 #if defined(BLEND_ON)
-UNITY_DEFINE_INSTANCED_PROP(float3, _blendInfo) //x-frameIndex_crossFade, y-pixelSegment, z- crossFadeFactor
+		UNITY_DEFINE_INSTANCED_PROP(float3, _blendInfo) //x-frameIndex_crossFade, y-pixelSegment, z- crossFadeFactor
 #define _blendInfo_arr Props
 #endif
-UNITY_INSTANCING_BUFFER_END(Props)
+	UNITY_INSTANCING_BUFFER_END(Props)
+#endif
 
 inline float4 indexToUV(float3 boneTexParams, float index)
 {
@@ -80,11 +84,20 @@ inline float4 skinToPos(float4 vertex, float4 boneIndex, float4 boneWeight, floa
 
 inline float4 skinning(float4 vertex, float4 boneIndex, float4 boneWeight)
 {
+#if (SHADER_TARGET < 30 || SHADER_API_GLES)
+	float2 frameInfo = _frameInfo;
+#else
 	float2 frameInfo = UNITY_ACCESS_INSTANCED_PROP(_frameInfo_arr, _frameInfo);
+#endif
+
 	float4 pos0 = skinToPos(vertex, boneIndex, boneWeight, frameInfo.x, frameInfo.y);
 
 #if BLEND_ON
+#if (SHADER_TARGET < 30 || SHADER_API_GLES)
+	float3 blendInfo = _blendInfo;
+#else
 	float3 blendInfo = UNITY_ACCESS_INSTANCED_PROP(_blendInfo_arr, _blendInfo);
+#endif
 	float4 pos1 = skinToPos(vertex, boneIndex, boneWeight, blendInfo.x, blendInfo.y);
 
 	return skin_blend(pos0, pos1, blendInfo.z);
@@ -120,11 +133,19 @@ inline float3 skinToNormal(float3 normal, float4 boneIndex, float4 boneWeight, f
 
 inline float3 skinning_normal(float3 normal, float4 boneIndex, float4 boneWeight)
 {
+#if (SHADER_TARGET < 30 || SHADER_API_GLES)
+	float2 frameInfo = _frameInfo;
+#else
 	float2 frameInfo = UNITY_ACCESS_INSTANCED_PROP(_frameInfo_arr, _frameInfo);
+#endif
 	float3 pos0 = skinToNormal(normal, boneIndex, boneWeight, frameInfo.x, frameInfo.y);
 
 #if BLEND_ON
+#if (SHADER_TARGET < 30 || SHADER_API_GLES)
+	float3 blendInfo = _blendInfo;
+#else
 	float3 blendInfo = UNITY_ACCESS_INSTANCED_PROP(_blendInfo_arr, _blendInfo);
+#endif
 	float3 pos1 = skinToNormal(normal, boneIndex, boneWeight, blendInfo.x, blendInfo.y);
 
 	return skin_blend_normal(pos0, pos1, blendInfo.z);
