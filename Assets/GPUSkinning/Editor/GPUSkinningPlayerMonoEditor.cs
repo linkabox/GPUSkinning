@@ -30,6 +30,21 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		EditorGUILayout.PropertyField(animDataProp);
 		if (EditorGUI.EndChangeCheck())
 		{
+			GPUSkinningAnimation animData = animDataProp.objectReferenceValue as GPUSkinningAnimation;
+			if (animData != null)
+			{
+				var meshFilter = _player.GetComponent<MeshFilter>();
+				if (meshFilter != null)
+				{
+					meshFilter.sharedMesh = animData.defaultMesh;
+				}
+
+				var meshRenderer = _player.GetComponent<MeshRenderer>();
+				if (meshRenderer != null)
+				{
+					meshRenderer.sharedMaterial = animData.material;
+				}
+			}
 			serializedObject.ApplyModifiedProperties();
 		}
 
