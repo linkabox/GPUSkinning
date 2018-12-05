@@ -18,7 +18,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
 	[HideInInspector]
 	[System.NonSerialized]
-	public AnimationClip animClip = null;
+	public AnimationClip curSampleAnimClip = null;
 
 	[HideInInspector]
 	[SerializeField]
@@ -96,8 +96,9 @@ public class GPUSkinningSampler : MonoBehaviour
 	private SkinnedMeshRenderer smr = null;
 
 	private GPUSkinningAnimation _tmpAnimData = null;
+	private GPUSkinningClip[] _oldSampleClips;
 
-	private GPUSkinningClip gpuSkinningClip = null;
+	private GPUSkinningClip _gpuSkinningClip = null;
 
 	private Vector3 rootMotionPosition;
 
@@ -117,12 +118,78 @@ public class GPUSkinningSampler : MonoBehaviour
 	public const string TEMP_SAVED_SHADER_PATH = "GPUSkinning_Temp_Save_Shader_Path";
 	public const string TEMP_SAVED_TEXTURE_PATH = "GPUSkinning_Temp_Save_Texture_Path";
 
-	private bool _initAnimData;
-
-	public void BeginSample()
+	public bool BeginSample()
 	{
-		_initAnimData = false;
+		if (string.IsNullOrEmpty(assetName.Trim()))
+		{
+			ShowDialog("Animation name is empty.");
+			return false;
+		}
+
+		if (animClips == null || animClips.Length == 0)
+		{
+			ShowDialog("Please set Anim Clips.");
+			return false;
+		}
+
+		smr = GetComponentInChildren<SkinnedMeshRenderer>();
+		if (smr == null)
+		{
+			ShowDialog("Cannot find SkinnedMeshRenderer.");
+			return false;
+		}
+		if (smr.sharedMesh == null)
+		{
+			ShowDialog("Cannot find SkinnedMeshRenderer.mesh.");
+			return false;
+		}
+
+		Mesh mesh = smr.sharedMesh;
+		if (mesh == null)
+		{
+			ShowDialog("Missing Mesh");
+			return false;
+		}
+
+		if (rootBoneTransform == null)
+		{
+			rootBoneTransform = this.transform;
+		}
+
 		samplingClipIndex = 0;
+		//First create animData
+		if (anim != null)
+		{
+			_tmpAnimData = anim;
+			_oldSampleClips = anim.clips;
+		}
+		else
+		{
+			_tmpAnimData = ScriptableObject.CreateInstance<GPUSkinningAnimation>();
+			_tmpAnimData.guid = System.Guid.NewGuid().ToString();
+			_oldSampleClips = null;
+		}
+		_tmpAnimData.assetName = assetName;
+
+		//Reset bone info
+		List<GPUSkinningBone> bonesResult = new List<GPUSkinningBone>();
+		CollectBones(bonesResult, smr.bones, mesh.bindposes, null, rootBoneTransform, 0);
+		GPUSkinningBone[] newBones = bonesResult.ToArray();
+		GenerateBonesGUID(newBones);
+		if (anim != null && anim.bones != null)
+		{
+			RestoreCustomBoneData(anim.bones, newBones);
+		}
+
+		_tmpAnimData.bones = newBones;
+		_tmpAnimData.rootBoneIndex = 0;
+		_tmpAnimData.exposeCount = GetExposeBonesCount(newBones);
+		_tmpAnimData.skinQuality = skinQuality;
+
+		//Reset clip info
+		_tmpAnimData.clips = new GPUSkinningClip[animClips.Length];
+
+		return true;
 	}
 
 	public void EndSample()
@@ -177,19 +244,34 @@ public class GPUSkinningSampler : MonoBehaviour
 			else
 			{
 				SaveUserPreferDir(savePath);
-
 				string dir = "Assets" + savePath.Substring(Application.dataPath.Length);
 
-				string savedAnimPath = dir + "/GPUSKinning_Anim_" + assetName + ".asset";
+				//Restore AnimClip Event
+				if (_oldSampleClips != null)
+				{
+					for (int i = 0; i < _tmpAnimData.clips.Length; i++)
+					{
+						var newClip = _tmpAnimData.clips[i];
+						foreach (var oldClip in _oldSampleClips)
+						{
+							if (oldClip.name == newClip.name)
+							{
+								RestoreCustomClipData(oldClip, newClip);
+								break;
+							}
+						}
+					}
+				}
 				SetSthAboutTexture(_tmpAnimData);
 				EditorUtility.SetDirty(_tmpAnimData);
 				if (anim != _tmpAnimData)
 				{
+					string savedAnimPath = dir + "/GPUSKinning_Anim_" + assetName + ".asset";
 					AssetDatabase.CreateAsset(_tmpAnimData, savedAnimPath);
+					WriteTempData(TEMP_SAVED_ANIM_PATH, savedAnimPath);
 				}
 
 				//AnimData
-				WriteTempData(TEMP_SAVED_ANIM_PATH, savedAnimPath);
 				anim = _tmpAnimData;
 
 				//Texture
@@ -244,132 +326,31 @@ public class GPUSkinningSampler : MonoBehaviour
 			return;
 		}
 
-		if (string.IsNullOrEmpty(assetName.Trim()))
-		{
-			ShowDialog("Animation name is empty.");
-			return;
-		}
-
-		if (rootBoneTransform == null)
-		{
-			ShowDialog("Please set Root Bone.");
-			return;
-		}
-
-		if (animClips == null || animClips.Length == 0)
-		{
-			ShowDialog("Please set Anim Clips.");
-			return;
-		}
-
-		animClip = animClips[samplingClipIndex];
-		if (animClip == null)
+		curSampleAnimClip = animClips[samplingClipIndex];
+		if (curSampleAnimClip == null)
 		{
 			isSampling = false;
 			return;
 		}
 
-		int numFrames = (int)(GetClipFPS(animClip, samplingClipIndex) * animClip.length);
+		int numFrames = (int)(GetClipFPS(curSampleAnimClip, samplingClipIndex) * curSampleAnimClip.length);
 		if (numFrames == 0)
 		{
 			isSampling = false;
 			return;
 		}
 
-		smr = GetComponentInChildren<SkinnedMeshRenderer>();
-		if (smr == null)
-		{
-			ShowDialog("Cannot find SkinnedMeshRenderer.");
-			return;
-		}
-		if (smr.sharedMesh == null)
-		{
-			ShowDialog("Cannot find SkinnedMeshRenderer.mesh.");
-			return;
-		}
-
-		Mesh mesh = smr.sharedMesh;
-		if (mesh == null)
-		{
-			ShowDialog("Missing Mesh");
-			return;
-		}
-
 		samplingFrameIndex = 0;
 
-		if (!_initAnimData)
-		{
-			//First create animData
-			if (anim != null)
-			{
-				_tmpAnimData = anim;
-			}
-			else
-			{
-				if (_tmpAnimData == null)
-				{
-					_tmpAnimData = ScriptableObject.CreateInstance<GPUSkinningAnimation>();
-					_tmpAnimData.guid = System.Guid.NewGuid().ToString();
-				}
-			}
-			_tmpAnimData.assetName = assetName;
-
-			List<GPUSkinningBone> bonesResult = new List<GPUSkinningBone>();
-			CollectBones(bonesResult, smr.bones, mesh.bindposes, null, rootBoneTransform, 0);
-			GPUSkinningBone[] newBones = bonesResult.ToArray();
-			GenerateBonesGUID(newBones);
-			if (anim != null && anim.bones != null)
-			{
-				RestoreCustomBoneData(anim.bones, newBones);
-			}
-
-			_tmpAnimData.bones = newBones;
-			_tmpAnimData.rootBoneIndex = 0;
-			_tmpAnimData.exposeCount = GetExposeBonesCount(newBones);
-			_tmpAnimData.skinQuality = skinQuality;
-
-			_initAnimData = true;
-		}
-
-		int numClips = _tmpAnimData.clips == null ? 0 : _tmpAnimData.clips.Length;
-		int overrideClipIndex = -1;
-		for (int i = 0; i < numClips; ++i)
-		{
-			if (_tmpAnimData.clips != null && _tmpAnimData.clips[i].name == animClip.name)
-			{
-				overrideClipIndex = i;
-				break;
-			}
-		}
-
-		gpuSkinningClip = new GPUSkinningClip();
-		gpuSkinningClip.name = animClip.name;
-		gpuSkinningClip.fps = GetClipFPS(animClip, samplingClipIndex);
-		gpuSkinningClip.length = animClip.length;
-		gpuSkinningClip.wrapMode = wrapModes[samplingClipIndex];
-		gpuSkinningClip.frames = new GPUSkinningFrame[numFrames];
-		gpuSkinningClip.rootMotionEnabled = rootMotionEnabled[samplingClipIndex];
-		gpuSkinningClip.individualDifferenceEnabled = individualDifferenceEnabled[samplingClipIndex];
-
-		if (_tmpAnimData.clips == null)
-		{
-			_tmpAnimData.clips = new GPUSkinningClip[] { gpuSkinningClip };
-		}
-		else
-		{
-			if (overrideClipIndex == -1)
-			{
-				List<GPUSkinningClip> clips = new List<GPUSkinningClip>(_tmpAnimData.clips);
-				clips.Add(gpuSkinningClip);
-				_tmpAnimData.clips = clips.ToArray();
-			}
-			else
-			{
-				GPUSkinningClip overridedClip = _tmpAnimData.clips[overrideClipIndex];
-				RestoreCustomClipData(overridedClip, gpuSkinningClip);
-				_tmpAnimData.clips[overrideClipIndex] = gpuSkinningClip;
-			}
-		}
+		_gpuSkinningClip = new GPUSkinningClip();
+		_gpuSkinningClip.name = curSampleAnimClip.name;
+		_gpuSkinningClip.fps = GetClipFPS(curSampleAnimClip, samplingClipIndex);
+		_gpuSkinningClip.length = curSampleAnimClip.length;
+		_gpuSkinningClip.wrapMode = wrapModes[samplingClipIndex];
+		_gpuSkinningClip.frames = new GPUSkinningFrame[numFrames];
+		_gpuSkinningClip.rootMotionEnabled = rootMotionEnabled[samplingClipIndex];
+		_gpuSkinningClip.individualDifferenceEnabled = individualDifferenceEnabled[samplingClipIndex];
+		_tmpAnimData.clips[samplingClipIndex] = _gpuSkinningClip;
 
 		SetCurrentAnimationClip();
 		PrepareRecordAnimator();
@@ -443,15 +424,15 @@ public class GPUSkinningSampler : MonoBehaviour
 	{
 		if (animator != null)
 		{
-			int numFrames = (int)(gpuSkinningClip.fps * gpuSkinningClip.length);
+			int numFrames = (int)(_gpuSkinningClip.fps * _gpuSkinningClip.length);
 
-			animator.applyRootMotion = gpuSkinningClip.rootMotionEnabled;
+			animator.applyRootMotion = _gpuSkinningClip.rootMotionEnabled;
 			animator.Rebind();
 			animator.recorderStartTime = 0;
 			animator.StartRecording(numFrames);
 			for (int i = 0; i < numFrames; ++i)
 			{
-				animator.Update(1.0f / gpuSkinningClip.fps);
+				animator.Update(1.0f / _gpuSkinningClip.fps);
 			}
 			animator.StopRecording();
 			animator.StartPlayback();
@@ -467,7 +448,7 @@ public class GPUSkinningSampler : MonoBehaviour
 			List<KeyValuePair<AnimationClip, AnimationClip>> overrideClips = new List<KeyValuePair<AnimationClip, AnimationClip>>(clips.Length);
 			for (int i = 0; i < clips.Length; ++i)
 			{
-				overrideClips.Add(new KeyValuePair<AnimationClip, AnimationClip>(clips[i], animClip));
+				overrideClips.Add(new KeyValuePair<AnimationClip, AnimationClip>(clips[i], curSampleAnimClip));
 			}
 			animatorOverrideController.runtimeAnimatorController = runtimeAnimatorController;
 			animatorOverrideController.ApplyOverrides(overrideClips);
@@ -782,7 +763,7 @@ public class GPUSkinningSampler : MonoBehaviour
 			return;
 		}
 
-		int totalFrams = (int)(gpuSkinningClip.length * gpuSkinningClip.fps);
+		int totalFrams = (int)(_gpuSkinningClip.length * _gpuSkinningClip.fps);
 		samplingTotalFrams = totalFrams;
 
 		if (samplingFrameIndex >= totalFrams)
@@ -796,9 +777,9 @@ public class GPUSkinningSampler : MonoBehaviour
 			return;
 		}
 
-		float time = gpuSkinningClip.length * ((float)samplingFrameIndex / totalFrams);
+		float time = _gpuSkinningClip.length * ((float)samplingFrameIndex / totalFrams);
 		GPUSkinningFrame frame = new GPUSkinningFrame();
-		gpuSkinningClip.frames[samplingFrameIndex] = frame;
+		_gpuSkinningClip.frames[samplingFrameIndex] = frame;
 		frame.matrices = new Matrix4x4[_tmpAnimData.bones.Length];
 		frame.jointMatrices = _tmpAnimData.exposeCount > 0 ? new Matrix4x4[_tmpAnimData.exposeCount] : null;
 
@@ -810,7 +791,7 @@ public class GPUSkinningSampler : MonoBehaviour
 		else
 		{
 			legacyAnimation.Stop();
-			AnimationState animState = legacyAnimation[animClip.name];
+			AnimationState animState = legacyAnimation[curSampleAnimClip.name];
 			if (animState != null)
 			{
 				animState.time = time;
@@ -881,9 +862,9 @@ public class GPUSkinningSampler : MonoBehaviour
 
 			if (samplingFrameIndex == 1)
 			{
-				gpuSkinningClip.frames[0].rootMotionDeltaPositionQ = gpuSkinningClip.frames[1].rootMotionDeltaPositionQ;
-				gpuSkinningClip.frames[0].rootMotionDeltaPositionL = gpuSkinningClip.frames[1].rootMotionDeltaPositionL;
-				gpuSkinningClip.frames[0].rootMotionDeltaRotation = gpuSkinningClip.frames[1].rootMotionDeltaRotation;
+				_gpuSkinningClip.frames[0].rootMotionDeltaPositionQ = _gpuSkinningClip.frames[1].rootMotionDeltaPositionQ;
+				_gpuSkinningClip.frames[0].rootMotionDeltaPositionL = _gpuSkinningClip.frames[1].rootMotionDeltaPositionL;
+				_gpuSkinningClip.frames[0].rootMotionDeltaRotation = _gpuSkinningClip.frames[1].rootMotionDeltaRotation;
 			}
 		}
 

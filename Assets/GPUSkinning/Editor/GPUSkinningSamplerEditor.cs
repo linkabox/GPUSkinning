@@ -148,8 +148,10 @@ public class GPUSkinningSamplerEditor : Editor
 					{
 						DestroyPreview();
 						LockInspector(true);
-						sampler.BeginSample();
-						sampler.StartSample();
+						if (sampler.BeginSample())
+						{
+							sampler.StartSample();
+						}
 					}
 				}
 			}
@@ -1398,7 +1400,7 @@ public class GPUSkinningSamplerEditor : Editor
 
 		if (sampler.isSampling)
 		{
-			string msg = sampler.animClip.name + "(" + (sampler.samplingClipIndex + 1) + "/" + sampler.animClips.Length + ")";
+			string msg = sampler.curSampleAnimClip.name + "(" + (sampler.samplingClipIndex + 1) + "/" + sampler.animClips.Length + ")";
 			EditorUtility.DisplayProgressBar("Sampling, DONOT stop playing", msg, (float)(sampler.samplingFrameIndex + 1) / sampler.samplingTotalFrams);
 		}
 	}
