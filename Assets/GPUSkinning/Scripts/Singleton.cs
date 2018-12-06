@@ -25,6 +25,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
 					if (_instance == null)
 					{
+						_destroy = false;
 						GameObject singleton = new GameObject();
 						_instance = singleton.AddComponent<T>();
 						singleton.name = "[Singleton]" + typeof(T).ToString();
@@ -38,11 +39,11 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 		}
 	}
 
-	private static bool applicationIsQuitting = false;
+	private static bool _destroy = true;
 
 	public void OnDestroy()
 	{
-		applicationIsQuitting = true;
+		_destroy = true;
 		OnDispose();
 	}
 
@@ -50,6 +51,6 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
 	public static bool IsDestroy()
 	{
-		return applicationIsQuitting;
+		return _destroy;
 	}
 }

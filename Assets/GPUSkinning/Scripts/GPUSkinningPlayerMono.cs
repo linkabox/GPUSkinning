@@ -93,7 +93,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 	}
 #endif
 
-	private void Awake()
+	private void Start()
 	{
 		Init();
 	}
@@ -137,10 +137,15 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 		animData = null;
 	}
 
+#if UNITY_EDITOR
 	void OnDrawGizmos()
 	{
-		Gizmos.color = Color.red;
-		var bounds = animData.defaultMesh.bounds;
-		Gizmos.DrawWireCube(this.transform.position + bounds.center, bounds.size);
+		if (animData != null)
+		{
+			Gizmos.color = Color.red;
+			var bounds = animData.defaultMesh.bounds;
+			Gizmos.DrawWireCube(this.transform.position + bounds.center, bounds.size);
+		}
 	}
+#endif
 }

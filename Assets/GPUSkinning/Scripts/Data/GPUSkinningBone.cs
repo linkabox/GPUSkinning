@@ -13,18 +13,13 @@ public class GPUSkinningBone
 
 	public int[] childrenBonesIndices = null;
 
-	[System.NonSerialized]
-	public Matrix4x4 animationMatrix;
-
 	public string name = null;
 
     public string guid = null; 
 
     public bool isExposed = false;
 
-    [System.NonSerialized]
     private bool bindposeInvInit = false;
-    [System.NonSerialized]
     private Matrix4x4 bindposeInv;
     public Matrix4x4 BindposeInv
     {

@@ -94,6 +94,7 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 		allMonoPlayers.Clear();
 	}
 
+#if UNITY_EDITOR
 	void OnDrawGizmos()
 	{
 		if (showCullingBounds)
@@ -118,4 +119,5 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 
 		}
 	}
+#endif
 }
