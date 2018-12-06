@@ -88,7 +88,7 @@ public class GPUSkinningPlayerMonoEditor : Editor
 		{
 			EditorGUILayout.BeginVertical("HelpBox");
 			EditorGUILayout.PrefixLabel("All Clips:");
-			if (_player.Player != null)
+			if (_player.Player != null && _player.Player.RefRes != null)
 			{
 				for (var i = 0; i < _player.Player.RefRes.animData.clips.Length; i++)
 				{

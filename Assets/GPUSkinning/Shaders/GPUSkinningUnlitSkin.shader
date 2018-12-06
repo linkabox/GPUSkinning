@@ -17,7 +17,7 @@
 			#pragma fragment frag
 			#pragma multi_compile_instancing
 			#pragma multi_compile BLEND_OFF BLEND_ON
-			#pragma multi_compile BONE_1 BONE_2 BONE_4
+			//#pragma multi_compile BONE_1 BONE_2 BONE_4
 			#include "UnityCG.cginc"
 			#include "GPUSkinningInclude.cginc"
 
@@ -45,9 +45,9 @@
 
 				v2f o;
 		
-				float4 pos = skinning(v.vertex, v.uv2, v.uv3);
+				skinning(v.vertex, v.uv2, v.uv3);
 
-				o.vertex = UnityObjectToClipPos(pos);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				return o;
 			}

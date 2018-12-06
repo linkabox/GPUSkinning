@@ -11,10 +11,10 @@
 
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf Standard addshadow 
+		#pragma surface surf Standard addshadow  
 		#pragma vertex vert 
 		#pragma multi_compile BLEND_OFF BLEND_ON
-		#pragma multi_compile BONE_1 BONE_2 BONE_4
+		#pragma target 3.0
 		#include "GPUSkinningInclude.cginc"
 
 		// Use shader model 3.0 target, to get nicer looking lighting
@@ -32,7 +32,7 @@
 
 		void vert(inout appdata_full v)
 		{
-			v.vertex = skinning(v.vertex, v.texcoord1, v.texcoord2);
+			skinning_normal(v.vertex, v.normal, v.texcoord1, v.texcoord2);
 		}
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
