@@ -90,6 +90,7 @@ inline void skinning(inout float4 vertex, float4 boneIndex, float4 boneWeight)
 
 inline void skinning_normal(inout float4 vertex,inout float3 normal, float4 boneIndex, float4 boneWeight)
 {
+	float4 skin_normal = float4(normal,0);
 #if (SHADER_TARGET < 30 || SHADER_API_GLES)
 	float2 frameInfo = _frameInfo;
 #else
@@ -107,10 +108,10 @@ inline void skinning_normal(inout float4 vertex,inout float3 normal, float4 bone
 	pos0 = pos0 + mul(mat2, vertex) * boneWeight.z;
 	pos0 = pos0 + mul(mat3, vertex) * boneWeight.w;
 
-	float4 n0 = mul(mat0, normal) * boneWeight.x;
-	n0 = n0 + mul(mat1, normal) * boneWeight.y;
-	n0 = n0 + mul(mat2, normal) * boneWeight.z;
-	n0 = n0 + mul(mat3, normal) * boneWeight.w;
+	float4 n0 = mul(mat0, skin_normal) * boneWeight.x;
+	//n0 = n0 + mul(mat1, skin_normal) * boneWeight.y;
+	//n0 = n0 + mul(mat2, skin_normal) * boneWeight.z;
+	//n0 = n0 + mul(mat3, skin_normal) * boneWeight.w;
 
 #if BLEND_ON
 #if (SHADER_TARGET < 30 || SHADER_API_GLES)
@@ -130,10 +131,10 @@ inline void skinning_normal(inout float4 vertex,inout float3 normal, float4 bone
 	pos1 = pos1 + mul(mat2, vertex) * boneWeight.z;
 	pos1 = pos1 + mul(mat3, vertex) * boneWeight.w;
 
-	float4 n1 = mul(mat0, normal) * boneWeight.x;
-	n1 = n1 + mul(mat1, normal) * boneWeight.y;
-	n1 = n1 + mul(mat2, normal) * boneWeight.z;
-	n1 = n1 + mul(mat3, normal) * boneWeight.w;
+	float4 n1 = mul(mat0, skin_normal) * boneWeight.x;
+	//n1 = n1 + mul(mat1, skin_normal) * boneWeight.y;
+	//n1 = n1 + mul(mat2, skin_normal) * boneWeight.z;
+	//n1 = n1 + mul(mat3, skin_normal) * boneWeight.w;
 
 	vertex = skin_blend(pos0, pos1, blendInfo.z);
 	normal = skin_blend(n0, n1, blendInfo.z);
