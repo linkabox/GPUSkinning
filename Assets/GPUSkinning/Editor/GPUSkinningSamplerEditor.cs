@@ -1368,19 +1368,20 @@ public class GPUSkinningSamplerEditor : Editor
 		}
 
 		float deltaTime = Time.realtimeSinceStartup - time;
-
-		if (preview != null)
+		if (deltaTime > 1 / 30f)
 		{
-			PreviewDrawBounds();
-			PreviewDrawArrows();
-			PreviewDrawGrid();
+			time = Time.realtimeSinceStartup;
+			if (preview != null)
+			{
+				PreviewDrawBounds();
+				PreviewDrawArrows();
+				PreviewDrawGrid();
 
-			preview.ManualUpdate(deltaTime);
-			PreviewInteraction_CameraRestriction();
-			cam.Render();
+				preview.ManualUpdate(deltaTime);
+				PreviewInteraction_CameraRestriction();
+				cam.Render();
+			}
 		}
-
-		time = Time.realtimeSinceStartup;
 
 		if (!sampler.isSampling && sampler.IsSamplingProgress())
 		{
