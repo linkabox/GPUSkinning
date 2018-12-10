@@ -213,13 +213,13 @@ public class GPUSkinningPlayerResources
 			UpdateCullingBounds();
 		}
 
-		if (mtrl.executeOncePerFrame.CanBeExecute())
-		{
-			mtrl.executeOncePerFrame.MarkAsExecuted();
-			mtrl.material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
-			mtrl.material.SetVector(shaderPropID_BoneTextureParams,
-				new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
-		}
+		//if (mtrl.executeOncePerFrame.CanBeExecute())
+		//{
+		//	mtrl.executeOncePerFrame.MarkAsExecuted();
+		//	mtrl.material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
+		//	mtrl.material.SetVector(shaderPropID_BoneTextureParams,
+		//		new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
+		//}
 	}
 
 	public void UpdatePlayingData(
@@ -281,6 +281,9 @@ public class GPUSkinningPlayerResources
 			mtrls[i].material.hideFlags = hideFlags;
 			//mtrls[i].material.enableInstancing = true; // enable instancing in Unity 5.6
 			mtrls[i].material.EnableKeyword(animData.skinQuality.ToString());
+			mtrls[i].material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
+			mtrls[i].material.SetVector(shaderPropID_BoneTextureParams,
+				new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
 			EnableKeywords(i, mtrls[i]);
 		}
 	}
