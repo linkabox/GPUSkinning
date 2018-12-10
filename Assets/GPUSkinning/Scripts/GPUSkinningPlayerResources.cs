@@ -20,9 +20,14 @@ public class GPUSkinningPlayerResources
 
 	public enum MaterialState
 	{
+#if DISABLE_SKIN_BLEND
+		BlendOff,
+		Count = 1
+#else
 		BlendOff,
 		BlendOn,
 		Count = 2
+#endif
 	}
 
 	public GPUSkinningAnimation animData = null;
@@ -35,7 +40,11 @@ public class GPUSkinningPlayerResources
 
 	private GPUSkinningMaterial[] mtrls = null;
 
+#if DISABLE_SKIN_BLEND
+	private static readonly string[] ShaderKeywords = { "BLEND_OFF", };
+#else
 	private static readonly string[] ShaderKeywords = { "BLEND_OFF", "BLEND_ON", };
+#endif
 
 	private readonly GPUSkinningExecuteOncePerFrame _executeOncePerFrame = new GPUSkinningExecuteOncePerFrame();
 
@@ -233,6 +242,9 @@ public class GPUSkinningPlayerResources
 		//	mpb.SetMatrix(shaderPropID_RootMotion, rootMotionInv);
 		//}
 
+#if DISABLE_SKIN_BLEND
+
+#else
 		if (IsCrossFadeBlending(lastPlayedClip, crossFadeTime, crossFadeProgress))
 		{
 			//if (lastPlayedClip.rootMotionEnabled)
@@ -248,6 +260,7 @@ public class GPUSkinningPlayerResources
 			mpb.SetVector(shaderPorpID_BlendInfo,
 				new Vector4(0, 0, 1, 0));
 		}
+#endif
 	}
 
 	public float CrossFadeBlendFactor(float crossFadeProgress, float crossFadeTime)
@@ -257,7 +270,11 @@ public class GPUSkinningPlayerResources
 
 	public bool IsCrossFadeBlending(GPUSkinningClip lastPlayedClip, float crossFadeTime, float crossFadeProgress)
 	{
+#if DISABLE_SKIN_BLEND
+		return false;
+#else
 		return lastPlayedClip != null && crossFadeTime > 0 && crossFadeProgress <= crossFadeTime;
+#endif
 	}
 
 	public GPUSkinningMaterial GetMaterial(MaterialState state)
@@ -277,7 +294,7 @@ public class GPUSkinningPlayerResources
 		for (int i = 0; i < mtrls.Length; ++i)
 		{
 			mtrls[i] = new GPUSkinningMaterial() { material = new Material(originalMaterial) };
-			mtrls[i].material.name = animData.skinQuality + "_" + ShaderKeywords[i];
+			mtrls[i].material.name = originalMaterial.name + "_" + animData.skinQuality + "_" + ShaderKeywords[i];
 			mtrls[i].material.hideFlags = hideFlags;
 			//mtrls[i].material.enableInstancing = true; // enable instancing in Unity 5.6
 			mtrls[i].material.EnableKeyword(animData.skinQuality.ToString());

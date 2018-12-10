@@ -539,7 +539,9 @@ public class GPUSkinningPlayer
 		{
 			return null;
 		}
-
+#if DISABLE_SKIN_BLEND
+		return _res.GetMaterial(GPUSkinningPlayerResources.MaterialState.BlendOff);
+#else
 		if (_playingClip == null)
 		{
 			return _res.GetMaterial(GPUSkinningPlayerResources.MaterialState.BlendOff);
@@ -551,6 +553,7 @@ public class GPUSkinningPlayer
 		}
 
 		return _res.GetMaterial(GPUSkinningPlayerResources.MaterialState.BlendOff);
+#endif
 	}
 
 	private void DoRootMotion(GPUSkinningFrame frame, float blend, bool doRotate)
