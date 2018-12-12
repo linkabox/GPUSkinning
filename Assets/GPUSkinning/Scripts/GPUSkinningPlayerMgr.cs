@@ -9,6 +9,14 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 	private List<GPUSkinningPlayerResources> refResList = new List<GPUSkinningPlayerResources>();
 	private List<GPUSkinningPlayerMono> allMonoPlayers = new List<GPUSkinningPlayerMono>();
 
+	public void ChangeShader(Shader shader)
+	{
+		foreach (var gpuSkinningPlayerResourcese in refResList)
+		{
+			gpuSkinningPlayerResourcese.ChangeShader(shader);
+		}
+	}
+
 	public GPUSkinningPlayerResources FindRefRes(string guid)
 	{
 		int numItems = refResList.Count;

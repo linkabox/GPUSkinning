@@ -13,7 +13,9 @@ public class GPUSkinningPlayerResources
 
 	private static readonly int shaderPorpID_FrameInfo = Shader.PropertyToID("_frameInfo");
 
+#if !DISABLE_SKIN_BLEND
 	private static readonly int shaderPorpID_BlendInfo = Shader.PropertyToID("_blendInfo");
+#endif
 
 	//private static int shaderPropID_RootMotion = Shader.PropertyToID("_rootMotion");
 	//private static int shaderPropID_Blend_RootMotion = Shader.PropertyToID("_blendRootMotion");
@@ -317,6 +319,17 @@ public class GPUSkinningPlayerResources
 			{
 				mtrl.material.DisableKeyword(ShaderKeywords[i]);
 			}
+		}
+	}
+
+	public void ChangeShader(Shader shader)
+	{
+		for (int i = 0; i < mtrls.Length; ++i)
+		{
+			mtrls[i].material.shader = shader;
+			mtrls[i].material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
+			mtrls[i].material.SetVector(shaderPropID_BoneTextureParams,
+				new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
 		}
 	}
 }

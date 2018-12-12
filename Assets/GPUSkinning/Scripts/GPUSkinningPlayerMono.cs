@@ -107,7 +107,7 @@ public class GPUSkinningPlayerMono : MonoBehaviour
 	{
 		if (player != null)
 		{
-			player.Update(Time.deltaTime * timeScale);
+			player.Update(deltaTime * timeScale);
 		}
 	}
 
