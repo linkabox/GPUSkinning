@@ -236,7 +236,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681829692}
-  m_Mesh: {fileID: 4300000, guid: c2821818bde9047cabc08c3f97e2fe7e, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 221b7a1adca55964b814185db4a82b88, type: 2}
 --- !u!23 &681829695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -283,14 +283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cc3e0bc554a8b4c91250cf750ba772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 11400000, guid: 801c90fda85824f67ba02ae9955079f4, type: 2}
-  mesh: {fileID: 4300000, guid: c2821818bde9047cabc08c3f97e2fe7e, type: 2}
-  mtrl: {fileID: 2100000, guid: cdd238ff5e5c849a78fc80623cff6ee3, type: 2}
-  boneTexture: {fileID: 2800000, guid: 3fa2a5730a8428244b7cd7c63bfd823b, type: 2}
-  defaultPlayingClipIndex: 0
+  animData: {fileID: 11400000, guid: 71d249401d1072f439eed7ab7dcb4966, type: 2}
+  defaultPlayingClipIndex: 4
   rootMotionEnabled: 0
   lodEnabled: 1
   cullingMode: 1
+  sphereRadius: 1
 --- !u!4 &681829697
 Transform:
   m_ObjectHideFlags: 0

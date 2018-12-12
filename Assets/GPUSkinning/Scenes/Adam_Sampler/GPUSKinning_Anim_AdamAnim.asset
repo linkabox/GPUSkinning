@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd8c482580fe4e09bcea6f4a052303b, type: 3}
   m_Name: GPUSKinning_Anim_AdamAnim
   m_EditorClassIdentifier: 
-  guid: b481278f-431f-4afd-80d4-cbe8d8f41d6d
+  guid: b501853a-73f0-46c9-9417-9bbcbe2c0e68
   assetName: AdamAnim
   bones:
   - bindpose:
@@ -787,6 +787,3753 @@ MonoBehaviour:
   exposeCount: 0
   rootBoneIndex: 0
   clips:
+  - name: Adam_Walk
+    length: 2.9
+    fps: 30
+    wrapMode: 1
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 0
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: PlantNTurnRigtht90
+    length: 1.5733333
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 9135
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: PlantNTurneft90
+    length: 1.5733333
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 14070
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: Idle
+    length: 3.1000004
+    fps: 30
+    wrapMode: 1
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 19005
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: PlantNTurnLeft135
+    length: 1.1266663
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 28770
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: PlantNTurnRigh135
+    length: 1.1466663
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 32235
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: PlantNTurnLeft180
+    length: 1.4566665
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 35805
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: PlantNTurnRight180
+    length: 1.4566665
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 40320
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: Run
+    length: 0.59333324
+    fps: 30
+    wrapMode: 1
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 44835
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotLeftA
+    length: 0.9333334
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 46620
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotLeftB
+    length: 1.0333338
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 49560
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotLeftC
+    length: 1.1333342
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 52815
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotLeftD
+    length: 1.2333336
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 56385
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotRightA
+    length: 0.9333334
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 60270
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotRightB
+    length: 1.0333338
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 63210
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotRightC
+    length: 1.1333342
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 66465
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: TurnOnSpotRightD
+    length: 1.2333336
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 70035
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: Walk
+    length: 0.9899998
+    fps: 30
+    wrapMode: 1
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 73920
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: WalkLeftMedium
+    length: 1.0500002
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 76965
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: WalkRightMedium
+    length: 1.0500002
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 80220
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: WalkLeftShort
+    length: 1.0233335
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 83475
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: WalkRightShort
+    length: 1.0233335
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 86625
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
+  - name: WalkLeftWide
+    length: 1.0266666
+    fps: 30
+    wrapMode: 0
+    frames:
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    - rootMotionDeltaPositionQ: {x: 0, y: 0, z: -0.008726535, w: 0.9999619}
+      rootMotionDeltaPositionL: 0
+      rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
+      jointMatrices: []
+    pixelSegmentation: 89775
+    rootMotionEnabled: 0
+    individualDifferenceEnabled: 0
+    events: []
   - name: WalkRightWide
     length: 1.04
     fps: 30
@@ -916,20 +4663,22 @@ MonoBehaviour:
       rootMotionDeltaPositionL: 0
       rootMotionDeltaRotation: {x: 0, y: 0, z: 0, w: 1}
       jointMatrices: []
-    pixelSegmentation: 0
+    pixelSegmentation: 92925
     rootMotionEnabled: 0
     individualDifferenceEnabled: 0
     events: []
-  textureWidth: 64
-  textureHeight: 64
+  textureWidth: 512
+  textureHeight: 256
   lodDistances:
   - 7
   - 8
   - 11
   - 9999
+  defaultMesh: {fileID: 4300000, guid: 221b7a1adca55964b814185db4a82b88, type: 2}
   lodMeshes:
   - {fileID: 4300000, guid: 1d11b9e68959c1448a8d8fd45a3ba0a2, type: 2}
   - {fileID: 4300000, guid: ac4f38271c6d5264c854dddab17dacc2, type: 2}
   - {fileID: 4300000, guid: 1d33c1e24ff095c4f8d41b5226d11696, type: 2}
-  sphereRadius: 1
   skinQuality: 2
+  boneTexture: {fileID: 2800000, guid: 696ecf6a5296a3e418cb68c8b2d4d793, type: 2}
+  material: {fileID: 2100000, guid: 33c9a919236acc244bfcef5da81ace7d, type: 2}

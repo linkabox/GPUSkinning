@@ -112,6 +112,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ReflectionProbeBoost: 1
+    - _ShadowInvLen: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -137,4 +138,8 @@ Material:
     - _MetaEmissionTint: {r: 1, g: 1, b: 1, a: 1}
     - _MetaSpecularAdd: {r: 0, g: 0, b: 0, a: 1}
     - _MetaSpecularTint: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowFadeParams: {r: 0, g: 1.5, b: 0.7, a: 0}
+    - _ShadowPlane: {r: 0, g: 1, b: 0, a: 0.1}
+    - _ShadowProjDir: {r: -0.06323785, g: -0.9545552, b: -0.2912483, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _WorldPos: {r: 0, g: 0.05, b: 0, a: 1}
