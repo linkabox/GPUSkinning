@@ -1,7 +1,9 @@
-﻿Shader "GPUSkinning/GPUSkinningSurfaceShader" {
+﻿Shader "GPUSkinning/Diffuse" {
 	Properties {
 		_Color ("Main Color", Color) = (1,1,1,1)
 		_MainTex ("Base (RGB)", 2D) = "white" {}
+		[HideInInspector]_boneTexture ("boneTexture", 2D) = "white" {}
+		[HideInInspector]_boneTextureParams ("boneTextureParams", Vector) = (0,0,0,0)
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -34,4 +36,5 @@
 		ENDCG
 	}
 	FallBack "Diffuse"
+	CustomEditor "GPUSkinningShaderEditor"
 }

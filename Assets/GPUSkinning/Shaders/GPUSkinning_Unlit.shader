@@ -1,11 +1,13 @@
-﻿Shader "GPUSkinning/GPUSkinning_Unlit_Skin"
+﻿Shader "GPUSkinning/Unlit"
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_MainTex("Texture", 2D) = "white" {}
+		[HideInInspector]_boneTexture ("boneTexture", 2D) = "white" {}
+		[HideInInspector]_boneTextureParams ("boneTextureParams", Vector) = (0,0,0,0)
 	}
 
-	SubShader
+		SubShader
 	{
 		Tags { "RenderType" = "Opaque" }
 		LOD 200
@@ -44,7 +46,7 @@
 				UNITY_SETUP_INSTANCE_ID(v);
 
 				v2f o;
-		
+
 				skinning(v.vertex, v.uv2, v.uv3);
 
 				o.vertex = UnityObjectToClipPos(v.vertex);
@@ -60,5 +62,6 @@
 			ENDCG
 		}
 	}
-	FallBack "Diffuse" 
+
+	CustomEditor "GPUSkinningShaderEditor"
 }

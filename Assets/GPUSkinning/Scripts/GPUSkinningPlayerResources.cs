@@ -300,9 +300,7 @@ public class GPUSkinningPlayerResources
 			mtrls[i].material.hideFlags = hideFlags;
 			//mtrls[i].material.enableInstancing = true; // enable instancing in Unity 5.6
 			mtrls[i].material.EnableKeyword(animData.skinQuality.ToString());
-			mtrls[i].material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
-			mtrls[i].material.SetVector(shaderPropID_BoneTextureParams,
-				new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
+			SetMaterialBoneData(this.animData, mtrls[i].material);
 			EnableKeywords(i, mtrls[i]);
 		}
 	}
@@ -327,9 +325,14 @@ public class GPUSkinningPlayerResources
 		for (int i = 0; i < mtrls.Length; ++i)
 		{
 			mtrls[i].material.shader = shader;
-			mtrls[i].material.SetTexture(shaderPropID_BoneTexture, this.animData.boneTexture);
-			mtrls[i].material.SetVector(shaderPropID_BoneTextureParams,
-				new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
+			SetMaterialBoneData(animData, mtrls[i].material);
 		}
+	}
+
+	public static void SetMaterialBoneData(GPUSkinningAnimation animData, Material mat)
+	{
+		mat.SetTexture(shaderPropID_BoneTexture, animData.boneTexture);
+		mat.SetVector(shaderPropID_BoneTextureParams,
+			new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
 	}
 }
