@@ -347,12 +347,12 @@ MonoBehaviour:
   individualDifferenceEnabled: 00
   lodMeshes: []
   lodDistances: []
-  boneTexture: {fileID: 2800000, guid: 83d4e5fbfd8c47c46a09bfb4f1f135b8, type: 2}
+  boneTexture: {fileID: 2800000, guid: 3044c4ab21f08f049b6ce24b447479c5, type: 2}
   skinQuality: 1
   rootBoneTransform: {fileID: 2032853539}
-  anim: {fileID: 11400000, guid: 50b8d148d9cda45dda50918853c145c5, type: 2}
-  savedMesh: {fileID: 4300000, guid: f8f381e7ac302407c860798e774b11b6, type: 2}
-  savedMtrl: {fileID: 2100000, guid: 2853ebfa51c794c3aab5ccf56907fca7, type: 2}
+  anim: {fileID: 11400000, guid: 1a17fd93f17e5bd48bd04ec05764746b, type: 2}
+  savedMesh: {fileID: 4300000, guid: 8e5c55bf510af5249ab9fdbdeb437c23, type: 2}
+  savedMtrl: {fileID: 2100000, guid: 567aa44066c623c45af57ace13560374, type: 2}
   savedShader: {fileID: 4800000, guid: ae0e2033e7e09224e89d7a9a30730c59, type: 3}
   updateOrNew: 1
 --- !u!4 &2032853539 stripped
