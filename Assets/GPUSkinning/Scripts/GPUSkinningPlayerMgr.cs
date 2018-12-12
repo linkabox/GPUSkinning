@@ -86,7 +86,10 @@ public class GPUSkinningPlayerMgr : Singleton<GPUSkinningPlayerMgr>
 		float deltaTime = Time.deltaTime;
 		foreach (var monoPlayer in allMonoPlayers)
 		{
-			monoPlayer.ManualUpdate(deltaTime);
+			if (monoPlayer.isActiveAndEnabled)
+			{
+				monoPlayer.ManualUpdate(deltaTime);
+			}
 		}
 	}
 
