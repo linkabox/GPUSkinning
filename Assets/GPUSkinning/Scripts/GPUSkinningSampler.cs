@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Text;
 using System.Text.RegularExpressions;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -593,7 +594,7 @@ public class GPUSkinningSampler : MonoBehaviour
 
 			GPUSkinningFrame[] frames = clip.frames;
 			int numFrames = frames.Length;
-			numPixels += gpuSkinningAnim.bones.Length * 3/*treat 3 pixels as a float3x4*/ * numFrames;
+			numPixels += gpuSkinningAnim.bones.Length * 3/*treat 3 pixels as a float3x4*/ * numFrames * 2;
 		}
 
 		CalculateTextureSize(numPixels, out gpuSkinningAnim.textureWidth, out gpuSkinningAnim.textureHeight);
@@ -601,12 +602,17 @@ public class GPUSkinningSampler : MonoBehaviour
 
 	private Texture2D CreateTextureMatrix(string dir, GPUSkinningAnimation gpuSkinningAnim)
 	{
-		Texture2D texture = new Texture2D(gpuSkinningAnim.textureWidth, gpuSkinningAnim.textureHeight, TextureFormat.RGBAHalf, false, true);
+		Texture2D texture = new Texture2D(gpuSkinningAnim.textureWidth, gpuSkinningAnim.textureHeight, TextureFormat.RGBA32, false, true);
 		texture.filterMode = FilterMode.Point;
 		texture.wrapMode = TextureWrapMode.Clamp;
 		texture.anisoLevel = 0;
 		Color[] pixels = texture.GetPixels();
 		int pixelIndex = 0;
+
+		float max = 0;
+		float min = float.MaxValue;
+
+		StringBuilder sb = new StringBuilder();
 		for (int clipIndex = 0; clipIndex < gpuSkinningAnim.clips.Length; ++clipIndex)
 		{
 			GPUSkinningClip clip = gpuSkinningAnim.clips[clipIndex];
@@ -620,14 +626,37 @@ public class GPUSkinningSampler : MonoBehaviour
 				for (int matrixIndex = 0; matrixIndex < numMatrices; ++matrixIndex)
 				{
 					Matrix4x4 matrix = matrices[matrixIndex];
-					pixels[pixelIndex++] = new Color(matrix.m00, matrix.m01, matrix.m02, matrix.m03);
-					pixels[pixelIndex++] = new Color(matrix.m10, matrix.m11, matrix.m12, matrix.m13);
-					pixels[pixelIndex++] = new Color(matrix.m20, matrix.m21, matrix.m22, matrix.m23);
+
+					for (int i = 0; i < 16; i++)
+					{
+						max = Mathf.Max(matrix[i], max);
+						min = Mathf.Min(matrix[i], min);
+					}
+					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m00, matrix.m01);
+					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m00 {1}, m01 {2}\n", pixels[pixelIndex - 1], matrix.m00, matrix.m01, matrixIndex, frameIndex);
+					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m02, matrix.m03);
+					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m02 {1}, m03 {2}\n", pixels[pixelIndex - 1], matrix.m02, matrix.m03, matrixIndex, frameIndex);
+
+					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m10, matrix.m11);
+					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m10 {1}, m11 {2}\n", pixels[pixelIndex - 1], matrix.m10, matrix.m11, matrixIndex, frameIndex);
+					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m12, matrix.m13);
+					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m12 {1}, m13 {2}\n", pixels[pixelIndex - 1], matrix.m12, matrix.m13, matrixIndex, frameIndex);
+
+					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m20, matrix.m21);
+					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m20 {1}, m21 {2}\n", pixels[pixelIndex - 1], matrix.m20, matrix.m21, matrixIndex, frameIndex);
+					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m22, matrix.m23);
+					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m22 {1}, m23 {2}\n", pixels[pixelIndex - 1], matrix.m22, matrix.m23, matrixIndex, frameIndex);
+
+					//pixels[pixelIndex++] = new Color(matrix.m00, matrix.m01, matrix.m02, matrix.m03);
+					//pixels[pixelIndex++] = new Color(matrix.m10, matrix.m11, matrix.m12, matrix.m13);
+					//pixels[pixelIndex++] = new Color(matrix.m20, matrix.m21, matrix.m22, matrix.m23);
 				}
 			}
 		}
+		sb.AppendFormat("min:{0} max:{1}\n", min, max);
 		texture.SetPixels(pixels);
 		texture.Apply();
+		File.WriteAllText("Assets/Temp/dump.txt", sb.ToString());
 
 		string savedPath = dir + "/" + assetName + "_BoneMap.asset";
 		AssetDatabase.CreateAsset(texture, savedPath);
