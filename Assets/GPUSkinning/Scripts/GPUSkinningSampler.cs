@@ -608,9 +608,6 @@ public class GPUSkinningSampler : MonoBehaviour
 		Color[] pixels = texture.GetPixels();
 		int pixelIndex = 0;
 
-		float max = 0;
-		float min = float.MaxValue;
-
 		for (int clipIndex = 0; clipIndex < gpuSkinningAnim.clips.Length; ++clipIndex)
 		{
 			GPUSkinningClip clip = gpuSkinningAnim.clips[clipIndex];
@@ -625,11 +622,6 @@ public class GPUSkinningSampler : MonoBehaviour
 				{
 					Matrix4x4 matrix = matrices[matrixIndex];
 
-					for (int i = 0; i < 16; i++)
-					{
-						max = Mathf.Max(matrix[i], max);
-						min = Mathf.Min(matrix[i], min);
-					}
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m00, matrix.m01);
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m02, matrix.m03);
 
