@@ -331,7 +331,12 @@ public class GPUSkinningPlayerResources
 
 	public static void SetMaterialBoneData(GPUSkinningAnimation animData, Material mat)
 	{
-		mat.SetTexture(shaderPropID_BoneTexture, animData.boneTexture);
+		if (animData == null) return;
+		if (mat == null) return;
+
+		if (animData.boneTexture != null)
+			mat.SetTexture(shaderPropID_BoneTexture, animData.boneTexture);
+
 		mat.SetVector(shaderPropID_BoneTextureParams,
 			new Vector4(animData.textureWidth, animData.textureHeight, animData.bones.Length * 3/*treat 3 pixels as a float3x4*/, 0));
 	}
