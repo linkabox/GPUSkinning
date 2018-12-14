@@ -3,7 +3,6 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 using System.Text.RegularExpressions;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -612,7 +611,6 @@ public class GPUSkinningSampler : MonoBehaviour
 		float max = 0;
 		float min = float.MaxValue;
 
-		StringBuilder sb = new StringBuilder();
 		for (int clipIndex = 0; clipIndex < gpuSkinningAnim.clips.Length; ++clipIndex)
 		{
 			GPUSkinningClip clip = gpuSkinningAnim.clips[clipIndex];
@@ -633,19 +631,13 @@ public class GPUSkinningSampler : MonoBehaviour
 						min = Mathf.Min(matrix[i], min);
 					}
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m00, matrix.m01);
-					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m00 {1}, m01 {2}\n", pixels[pixelIndex - 1], matrix.m00, matrix.m01, matrixIndex, frameIndex);
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m02, matrix.m03);
-					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m02 {1}, m03 {2}\n", pixels[pixelIndex - 1], matrix.m02, matrix.m03, matrixIndex, frameIndex);
 
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m10, matrix.m11);
-					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m10 {1}, m11 {2}\n", pixels[pixelIndex - 1], matrix.m10, matrix.m11, matrixIndex, frameIndex);
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m12, matrix.m13);
-					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m12 {1}, m13 {2}\n", pixels[pixelIndex - 1], matrix.m12, matrix.m13, matrixIndex, frameIndex);
 
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m20, matrix.m21);
-					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m20 {1}, m21 {2}\n", pixels[pixelIndex - 1], matrix.m20, matrix.m21, matrixIndex, frameIndex);
 					pixels[pixelIndex++] = GPUSkinningUtil.PackTwoFloatToColor(matrix.m22, matrix.m23);
-					sb.AppendFormat("matIndex:{4}-{3} Color:{0} rawMatrix:m22 {1}, m23 {2}\n", pixels[pixelIndex - 1], matrix.m22, matrix.m23, matrixIndex, frameIndex);
 
 					//pixels[pixelIndex++] = new Color(matrix.m00, matrix.m01, matrix.m02, matrix.m03);
 					//pixels[pixelIndex++] = new Color(matrix.m10, matrix.m11, matrix.m12, matrix.m13);
@@ -653,10 +645,8 @@ public class GPUSkinningSampler : MonoBehaviour
 				}
 			}
 		}
-		sb.AppendFormat("min:{0} max:{1}\n", min, max);
 		texture.SetPixels(pixels);
 		texture.Apply();
-		File.WriteAllText("Assets/Temp/dump.txt", sb.ToString());
 
 		string savedPath = dir + "/" + assetName + "_BoneMap.asset";
 		AssetDatabase.CreateAsset(texture, savedPath);
