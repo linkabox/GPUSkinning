@@ -38,8 +38,7 @@
 		float4 posWorld : TEXCOORD0;
 		float3 normalDir : TEXCOORD1;
 		float3 lightDir : TEXCOORD2;
-		float3 viewDir : TEXCOORD3;
-		float3 vertexLighting : TEXCOORD4;
+		float3 vertexLighting : TEXCOORD3;
 		LIGHTING_COORDS(5, 6)
 		float2 uv : TEXCOORD7;
 	};
@@ -64,7 +63,6 @@
 		o.posWorld = mul(unity_ObjectToWorld, v.vertex);
 		o.normalDir = UnityObjectToWorldNormal(v.normal);
 		o.lightDir = UnityWorldSpaceLightDir(o.posWorld);
-		o.viewDir = UnityWorldSpaceViewDir(o.posWorld);
 		o.vertexLighting = float3(0, 0, 0);
 
 	// SH/ambient and vertex lights  
@@ -119,7 +117,8 @@
 			ENDCG
 		}
 
-		UsePass "GPUSkinning/PlanarShadow/SHADOW"
+		UsePass "GPUSkinning/ShadowCaster/SHADOWCASTER"
+		//UsePass "GPUSkinning/PlanarShadow/SHADOW"
 	}
 
 	SubShader
